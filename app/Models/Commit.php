@@ -9,23 +9,14 @@ class Commit extends Model
 {
     use HasFactory;
 
-    /**
-     * The attributes that are mass assignable.
-     *
-     * @var array
-     */
     protected $fillable = [
         'message',
         'info',
     ];
 
-    /**
-     * The attributes that should be cast to native types.
-     *
-     * @var array
-     */
     protected $casts = [
         'id' => 'integer',
+        'shift_id' => 'integer',
         'info' => 'boolean',
     ];
 }

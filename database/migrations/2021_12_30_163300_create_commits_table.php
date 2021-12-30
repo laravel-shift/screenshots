@@ -15,8 +15,9 @@ class CreateCommitsTable extends Migration
     {
         Schema::create('commits', function (Blueprint $table) {
             $table->id();
+            $table->foreignId('shift_id');
             $table->string('message');
-            $table->boolean('info');
+            $table->boolean('info')->default(0);
             $table->timestamps();
         });
     }
