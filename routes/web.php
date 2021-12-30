@@ -13,6 +13,5 @@ use Illuminate\Support\Facades\Route;
 |
 */
 
-Route::get('/', function () {
-    return view('welcome');
-});
+Route::get('/', [App\Http\Controllers\ShiftController::class, 'index'])->name('shift.index');
+Route::get('shift/{shift}', [App\Http\Controllers\ShiftController::class, 'show'])->name('shift.show');
