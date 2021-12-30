@@ -24,4 +24,14 @@ class Shift extends Model
     {
         return $this->hasMany(Commit::class);
     }
+
+    public function getPublisedAtAttribute($value)
+    {
+        return $value ?? now();
+    }
+
+    public function isTailwind(): bool
+    {
+        return $this->type === 'Tailwind';
+    }
 }
