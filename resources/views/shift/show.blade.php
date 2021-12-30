@@ -1,7 +1,5 @@
-{{--
-    @extends('layouts.app')
+ @extends('layouts.app')
 
-    @section('content')
-        shift.show template
-    @endsection
---}}
+@section('content')
+    shift.show template
+@endsection
