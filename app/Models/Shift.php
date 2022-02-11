@@ -11,6 +11,7 @@ class Shift extends Model
 
     protected $fillable = [
         'name',
+        'sku',
         'type',
         'published_at',
     ];

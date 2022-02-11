@@ -12,6 +12,7 @@ class ShiftsSeeder extends Seeder
         // Laravel
         $shift = Shift::create([
             'name' => 'Laravel 5.0 Shift',
+            'sku' => '50',
             'type' => 'Laravel',
             'published_at' => '2015-02-04',
         ]);
@@ -28,6 +29,7 @@ class ShiftsSeeder extends Seeder
 
         $shift = Shift::create([
             'name' => 'Laravel 5.1 Shift',
+            'sku' => '51',
             'type' => 'Laravel',
             'published_at' => '2015-06-09',
         ]);
@@ -44,6 +46,7 @@ class ShiftsSeeder extends Seeder
 
         $shift = Shift::create([
             'name' => 'Laravel 5.2 Shift',
+            'sku' => '52',
             'type' => 'Laravel',
             'published_at' => '2015-12-21',
         ]);
@@ -60,6 +63,7 @@ class ShiftsSeeder extends Seeder
 
         $shift = Shift::create([
             'name' => 'Laravel 5.3 Shift',
+            'sku' => '53',
             'type' => 'Laravel',
             'published_at' => '2016-08-23',
         ]);
@@ -76,6 +80,7 @@ class ShiftsSeeder extends Seeder
 
         $shift = Shift::create([
             'name' => 'Laravel 5.4 Shift',
+            'sku' => '54',
             'type' => 'Laravel',
             'published_at' => '2017-01-24',
         ]);
@@ -92,6 +97,7 @@ class ShiftsSeeder extends Seeder
 
         $shift = Shift::create([
             'name' => 'Laravel 5.5 Shift',
+            'sku' => '55',
             'type' => 'Laravel',
             'published_at' => '2017-08-30',
         ]);
@@ -108,6 +114,7 @@ class ShiftsSeeder extends Seeder
 
         $shift = Shift::create([
             'name' => 'Laravel 5.6 Shift',
+            'sku' => '56',
             'type' => 'Laravel',
             'published_at' => '2018-02-07',
         ]);
@@ -124,6 +131,7 @@ class ShiftsSeeder extends Seeder
 
         $shift = Shift::create([
             'name' => 'Laravel 5.7 Shift',
+            'sku' => '57',
             'type' => 'Laravel',
             'published_at' => '2018-09-04',
         ]);
@@ -140,6 +148,7 @@ class ShiftsSeeder extends Seeder
 
         $shift = Shift::create([
             'name' => 'Laravel 5.8 Shift',
+            'sku' => '58',
             'type' => 'Laravel',
             'published_at' => '2019-02-26',
         ]);
@@ -157,6 +166,7 @@ class ShiftsSeeder extends Seeder
 
         $shift = Shift::create([
             'name' => 'Laravel 6.x Shift',
+            'sku' => '60',
             'type' => 'Laravel',
             'published_at' => '2019-09-03',
         ]);
@@ -173,6 +183,7 @@ class ShiftsSeeder extends Seeder
 
         $shift = Shift::create([
             'name' => 'Laravel 7.x Shift',
+            'sku' => '70',
             'type' => 'Laravel',
             'published_at' => '2020-03-03',
         ]);
@@ -189,6 +200,7 @@ class ShiftsSeeder extends Seeder
 
         $shift = Shift::create([
             'name' => 'Laravel 8.x Shift',
+            'sku' => '80',
             'type' => 'Laravel',
             'published_at' => '2020-09-08',
         ]);
@@ -205,8 +217,9 @@ class ShiftsSeeder extends Seeder
 
         $shift = Shift::create([
             'name' => 'Laravel 9.x Shift',
+            'sku' => '90',
             'type' => 'Laravel',
-            'published_at' => '2022-01-25',
+            'published_at' => '2022-02-08',
         ]);
         $shift->commits()->createMany([
             ['message' => 'Shift core files'],
@@ -222,6 +235,7 @@ class ShiftsSeeder extends Seeder
         // additional Shifts
         $shift = Shift::create([
             'name' => 'Upgrade Checker',
+            'sku' => 'UC',
             'type' => 'Laravel',
         ]);
         $shift->commits()->createMany([
@@ -233,11 +247,13 @@ class ShiftsSeeder extends Seeder
 
         $shift = Shift::create([
             'name' => 'Laravel Linter',
+            'sku' => 'LL',
             'type' => 'Laravel',
         ]);
 
         $shift = Shift::create([
             'name' => 'Laravel Fixer',
+            'sku' => 'LF',
             'type' => 'Laravel',
         ]);
         $shift->commits()->createMany([
@@ -253,6 +269,7 @@ class ShiftsSeeder extends Seeder
 
         $shift = Shift::create([
             'name' => 'Tests Generator',
+            'sku' => 'TG',
             'type' => 'Laravel',
         ]);
         $shift->commits()->createMany([
@@ -267,6 +284,7 @@ class ShiftsSeeder extends Seeder
 
         $shift = Shift::create([
             'name' => 'Namespace Models Shift',
+            'sku' => 'NM',
             'type' => 'Laravel',
         ]);
         $shift->commits()->createMany([
@@ -276,6 +294,7 @@ class ShiftsSeeder extends Seeder
 
         $shift = Shift::create([
             'name' => 'BrowserKit Tests Converter',
+            'sku' => 'T54',
             'type' => 'Laravel',
         ]);
         $shift->commits()->createMany([
@@ -287,11 +306,13 @@ class ShiftsSeeder extends Seeder
 
         $shift = Shift::create([
             'name' => 'Namespace Consolidator',
+            'sku' => 'CN',
             'type' => 'Laravel',
         ]);
 
         $shift = Shift::create([
             'name' => 'Dependency Upgrader',
+            'sku' => 'DU',
             'type' => 'Laravel',
         ]);
 
@@ -299,6 +320,7 @@ class ShiftsSeeder extends Seeder
         // Lumen
         $shift = Shift::create([
             'name' => 'Lumen to Laravel Shift',
+            'sku' => 'LTL',
             'type' => 'Lumen',
         ]);
         $shift->commits()->createMany([
@@ -315,6 +337,7 @@ class ShiftsSeeder extends Seeder
         // Tailwind
         $shift = Shift::create([
             'name' => 'Tailwind 1.x Shift',
+            'sku' => 'T1',
             'type' => 'Tailwind',
             'published_at' => '2019-05-13',
         ]);
@@ -331,6 +354,7 @@ class ShiftsSeeder extends Seeder
 
         $shift = Shift::create([
             'name' => 'Tailwind 2.x Shift',
+            'sku' => 'T2',
             'type' => 'Tailwind',
             'published_at' => '2020-11-18',
         ]);
@@ -347,6 +371,7 @@ class ShiftsSeeder extends Seeder
 
         $shift = Shift::create([
             'name' => 'Tailwind 3.x Shift',
+            'sku' => 'T3',
             'type' => 'Tailwind',
             'published_at' => '2021-12-09',
         ]);
@@ -362,6 +387,7 @@ class ShiftsSeeder extends Seeder
 
         $shift = Shift::create([
             'name' => 'Tailwind UI Shift',
+            'sku' => 'TU',
             'type' => 'Tailwind',
             'published_at' => '2020-11-18',
         ]);
@@ -378,6 +404,7 @@ class ShiftsSeeder extends Seeder
 
         $shift = Shift::create([
             'name' => 'Tailwind Converter',
+            'sku' => 'TC',
             'type' => 'Tailwind',
         ]);
         $shift->commits()->createMany([
@@ -392,6 +419,7 @@ class ShiftsSeeder extends Seeder
 
         $shift = Shift::create([
             'name' => 'Tailwind Linter',
+            'sku' => 'TL',
             'type' => 'Tailwind',
         ]);
         $shift->commits()->createMany([
@@ -403,39 +431,46 @@ class ShiftsSeeder extends Seeder
         // PHP
         $shift = Shift::create([
             'name' => 'PSR-2 Shift',
+            'sku' => 'P2',
             'type' => 'PHP',
         ]);
 
         $shift = Shift::create([
             'name' => 'PSR-4 Shift',
+            'sku' => 'P4',
             'type' => 'PHP',
         ]);
 
         $shift = Shift::create([
             'name' => 'MySQL to MySQLi Shift',
+            'sku' => 'MM',
             'type' => 'PHP',
         ]);
 
         $shift = Shift::create([
             'name' => 'PHPUnit 6 Shift',
+            'sku' => 'PU6',
             'type' => 'PHP',
             'published_at' => '2017-02-03',
         ]);
 
         $shift = Shift::create([
             'name' => 'PHPUnit 8 Shift',
+            'sku' => 'PU8',
             'type' => 'PHP',
             'published_at' => '2019-02-01',
         ]);
 
         $shift = Shift::create([
             'name' => 'PHPUnit 9 Shift',
+            'sku' => 'PU9',
             'type' => 'PHP',
             'published_at' => '2020-02-07',
         ]);
 
         $shift = Shift::create([
             'name' => 'Pest Converter',
+            'sku' => 'PP',
             'type' => 'PHP',
         ]);
         $shift->commits()->createMany([
@@ -451,6 +486,7 @@ class ShiftsSeeder extends Seeder
 
         $shift = Shift::create([
             'name' => 'CI Generator',
+            'sku' => 'CI',
             'type' => 'PHP',
         ]);
         $shift->commits()->createMany([
