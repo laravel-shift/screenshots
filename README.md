@@ -1,6 +1,16 @@
 # Shift Screenshots
 This project recreates the GitHub Pull Request screens to allow automating the process of taking screenshots for each of the individual Shifts.
 
+## System Requirements
+
+In addition to the standard Laravel requirements, this project has the following system requirements:
+
+* The PHP GD extension
+* Optipng
+* Pngquant 2
+
+See [spatie/image-optimizer](https://github.com/spatie/image-optimizer#optimization-tools) for installation instructions on various operating systems.
+
 ## Installation
 The following commands will install the project dependencies:
 

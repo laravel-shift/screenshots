@@ -5,6 +5,7 @@ namespace App\Console\Commands;
 use App\Models\Shift;
 use Illuminate\Console\Command;
 use Spatie\Browsershot\Browsershot;
+use Spatie\Image\Image;
 
 class TakeScreenshot extends Command
 {
@@ -23,10 +24,16 @@ class TakeScreenshot extends Command
                 'view' => 'commits',
             ])->render();
 
+            $path = public_path('images/screenshots/' . $shift->sku . '.png');
+
             Browsershot::html($html)
                 ->windowSize(1200, 628)
                 ->deviceScaleFactor(2)
-                ->save(public_path('images/screenshots/' . $shift->sku . '.png'));
+                ->save($path);
+
+            Image::load($path)
+                ->optimize()
+                ->save();
         }
 
         return 0;
