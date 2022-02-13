@@ -5,7 +5,7 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Shift Screenshots</title>
   <style>
-    @php include(public_path('css/app.css')) @endphp
+    @php include public_path('css/app.css') @endphp
   </style>
 </head>
 <body>
