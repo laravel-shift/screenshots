@@ -15,7 +15,7 @@ class TakeScreenshot extends Command
     public function handle()
     {
         $shifts = is_null($this->argument('shift')) ? Shift::all()
-            : [Shift::findOrFail($this->argument('shift'))];
+            : [Shift::where('sku', $this->argument('shift'))->firstOrFail()];
 
         foreach ($shifts as $shift) {
             $html = view('shift.show', [
