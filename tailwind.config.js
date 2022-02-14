@@ -5,7 +5,18 @@ module.exports = {
         "./resources/**/*.vue",
     ],
     theme: {
-        extend: {},
+        extend: {
+            colors: {
+                github: {
+                    'merged': '#8250df',
+                    'branch-bg': '#ddf4ff',
+                    'branch-fg': '#0969da',
+                },
+            },
+            fontFamily: {
+                sans: '-apple-system,BlinkMacSystemFont,"Segoe UI",Helvetica,Arial,sans-serif,"Apple Color Emoji","Segoe UI Emoji"',
+            },
+        },
     },
     plugins: [
         require('@tailwindcss/typography'),
