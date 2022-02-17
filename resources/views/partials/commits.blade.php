@@ -17,7 +17,10 @@
                         <h3 class="font-semibold text-gray-800">{{ $commit->message }}</h3>
                         <p class="mt-1 flex items-center gap-1 text-gray-600 text-xs">
                             <span class="inline-flex items-center gap-1">
-                                <img src="/images/shift-avatar.png" class="inline-block h-5 w-5 rounded-full" />
+                                <img
+                                    src="data:image/png;base64,{{ base64_encode(file_get_contents(public_path('images/shift-avatar.png'))) }}"
+                                    class="inline-block h-5 w-5 rounded-full"
+                                />
                                 <strong class="text-gray-800">laravel-shift</strong>
                             </span>
                             <span>committed {{ $minutes }} minutes ago</span>
