@@ -1,6 +1,13 @@
 @extends('layouts.app')
 
 @section('content')
+
+@php
+if (!$view) {
+    $view = view()->exists("shift.skus.{$shift->sku}") ? 'pr' : 'commits';
+}
+@endphp
+
 <main class="p-6 text-sm">
     <header class="border-b border-gray-300">
         <h1 class="text-3xl text-gray-900">{{ $shift->name }} <span class="text-gray-600">#{{ rand(100, 999) }}</span></h1>
@@ -25,21 +32,21 @@
 
         <div class="mt-6 flex justify-between items-center">
             <nav class="flex gap-1">
-                <span class="-m-px px-4 py-2 space-x-1 text-gray-600">
+                <a href="?view=pr" class="-m-px px-4 py-2 space-x-1 {{ $view === 'pr' ? 'bg-white border-t border-x border-gray-300 rounded-t-md text-gray-900' : 'text-gray-600' }}">
                     <svg aria-hidden="true" height="16" viewBox="0 0 16 16" version="1.1" width="16" data-view-component="true" class="inline-block fill-current">
                         <path fill-rule="evenodd" d="M1.5 2.75a.25.25 0 01.25-.25h8.5a.25.25 0 01.25.25v5.5a.25.25 0 01-.25.25h-3.5a.75.75 0 00-.53.22L3.5 11.44V9.25a.75.75 0 00-.75-.75h-1a.25.25 0 01-.25-.25v-5.5zM1.75 1A1.75 1.75 0 000 2.75v5.5C0 9.216.784 10 1.75 10H2v1.543a1.457 1.457 0 002.487 1.03L7.061 10h3.189A1.75 1.75 0 0012 8.25v-5.5A1.75 1.75 0 0010.25 1h-8.5zM14.5 4.75a.25.25 0 00-.25-.25h-.5a.75.75 0 110-1.5h.5c.966 0 1.75.784 1.75 1.75v5.5A1.75 1.75 0 0114.25 12H14v1.543a1.457 1.457 0 01-2.487 1.03L9.22 12.28a.75.75 0 111.06-1.06l2.22 2.22v-2.19a.75.75 0 01.75-.75h1a.25.25 0 00.25-.25v-5.5z"></path>
                     </svg>
                     <span>Conversation</span>
                     <span class="px-2 py-1 bg-gray-100 rounded-full text-sm">{{ Arr::random([6, 7, 8, 9, 10, 11]) }}</span>
-                </span>
+                </a>
 
-                <span class="-m-px px-5 py-2 space-x-1 bg-white border-t border-x border-gray-300 rounded-t-md text-gray-900">
+                <a href="?view=commits" class="-m-px px-4 py-2 space-x-1 {{ $view === 'commits' ? 'bg-white border-t border-x border-gray-300 rounded-t-md text-gray-900' : 'text-gray-600' }}">
                     <svg aria-hidden="true" height="16" viewBox="0 0 16 16" version="1.1" width="16" data-view-component="true" class="inline-block fill-current">
                         <path fill-rule="evenodd" d="M10.5 7.75a2.5 2.5 0 11-5 0 2.5 2.5 0 015 0zm1.43.75a4.002 4.002 0 01-7.86 0H.75a.75.75 0 110-1.5h3.32a4.001 4.001 0 017.86 0h3.32a.75.75 0 110 1.5h-3.32z"></path>
                     </svg>
                     <span>Commits</span>
                     <span class="px-2 py-1 bg-gray-100 rounded-full text-sm">{{ $shift->commits->count() }}</span>
-                </span>
+                </a>
 
                 <span class="-m-px px-4 py-2 space-x-1 text-gray-600">
                     <svg aria-hidden="true" height="16" viewBox="0 0 16 16" version="1.1" width="16" data-view-component="true" class="inline-block fill-current">
@@ -72,7 +79,10 @@
         </div>
     </header>
 
-    @includeWhen($view === 'pr', 'partials.pr')
-    @includeUnless($view === 'pr', 'partials.commits')
+    @if ($view === 'commits')
+        @include('partials.commits')
+    @elseif ($view === 'pr')
+        @includeFirst(["shift.skus.{$shift->sku}", 'partials.pr'])
+    @endif
 </main>
 @endsection
