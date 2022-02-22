@@ -21,7 +21,7 @@ class TakeScreenshot extends Command
         foreach ($shifts as $shift) {
             $html = view('shift.show', [
                 'shift' => $shift,
-                'view' => 'commits',
+                'view' => null,
             ])->render();
 
             $path = public_path('images/screenshots/' . $shift->sku . '.png');

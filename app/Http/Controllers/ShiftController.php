@@ -18,7 +18,7 @@ class ShiftController extends Controller
     {
         return view('shift.show', [
             'shift' => $shift,
-            'view' => $request->query('view', 'commits'),
+            'view' => $request->query('view'),
         ]);
     }
 }
