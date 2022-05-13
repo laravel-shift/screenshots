@@ -70,7 +70,7 @@ jobs:
         run: php artisan screenshot
 
       - name: Upload screenshots
-        if: succes()
+        if: success()
         uses: actions/upload-artifact@v2
         with:
           name: screenshots
