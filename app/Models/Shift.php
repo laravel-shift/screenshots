@@ -26,9 +26,8 @@ class Shift extends Model
         return $this->hasMany(Commit::class);
     }
 
-    public function getPublisedAtAttribute($value)
+    public function getPublishedAtAttribute($value)
     {
-        var_dump($value);
         return $value ?? now();
     }
 
