@@ -28,6 +28,7 @@ class Shift extends Model
 
     public function getPublishedAtAttribute($value)
     {
+        var_dump($value);
         return $value ?? now();
     }
 
