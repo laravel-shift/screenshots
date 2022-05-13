@@ -61,12 +61,7 @@ jobs:
       - name: Seed database
         run: php artisan migrate:fresh --seed
 
-      - name: Run Dusk tests
-        env:
-          APP_ENV: testing
-          APP_URL: http://127.0.0.1:8000
-          DB_CONNECTION: mysql
-          DB_HOST: 127.0.0.1
+      - name: Generating screenshots
         run: php artisan screenshot
 
       - name: Upload screenshots
