@@ -1,8 +1,10 @@
-name: Dusk
+name: Build
 on:
   - push
 jobs:
   dusk:
+    name: Lint
+    runs-on: ubuntu-latest
     steps:
       - name: Checkout
         uses: actions/checkout@v2
