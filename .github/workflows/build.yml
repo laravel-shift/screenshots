@@ -2,8 +2,8 @@ name: Build
 on:
   - push
 jobs:
-  dusk:
-    name: Lint
+  screenshots:
+    name: Generate Screenshots
     runs-on: ubuntu-latest
     steps:
       - name: Checkout
