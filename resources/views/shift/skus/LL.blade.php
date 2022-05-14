@@ -13,3 +13,4 @@
 
 <p>Much of the <em>lint</em> detected may be automatically fixed by running the <a href="https://laravelshift.com/laravel-code-fixer">Laravel Fixer</a> or tasks within the <a href="https://laravelshift.com/workbench">Shift Workbench</a>.</p>
 
+@endsection

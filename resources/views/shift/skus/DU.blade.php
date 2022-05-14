@@ -11,3 +11,5 @@
     <li>Run <code>composer update</code></li>
     <li>Thoroughly test your application (<a href="https://laravelshift.com/laravel-test-generator">no tests?</a>, <a href="https://laravelshift.com/ci-generator">no CI?</a>)</li>
 </ul>
+
+@endsection
