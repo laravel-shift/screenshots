@@ -60,6 +60,9 @@ jobs:
       - name: Seed database
         run: php artisan migrate:fresh --seed
 
+      - name: Run application
+        run: php artisan serve --no-reload > storage/logs/server.log 2>&1 &
+
       - name: Generating screenshots
         run: php artisan screenshot
 
