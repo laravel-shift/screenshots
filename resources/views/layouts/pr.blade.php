@@ -8,7 +8,7 @@
                         <b class="text-gray-700">laravel-shift</b> commented on {{ $shift->published_at->format('M j, Y') }}}
                     </div>
                     <div class="p-4 space-y-4 text-gray-800">
-                        @yield('content')
+                        @yield('description')
                     </div>
                 </div>
             </div>

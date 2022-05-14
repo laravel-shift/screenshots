@@ -19,17 +19,16 @@ class TakeScreenshot extends Command
             : [Shift::where('sku', $this->argument('shift'))->firstOrFail()];
 
         foreach ($shifts as $shift) {
-            $this->line('Generating: ' . $shift->sku);
+            $filename = $shift->slug . '.png';
+            $this->line('Generating: ' . $filename);
 
             $html = view('shift.show', ['shift' => $shift])->render();
 
-            $path = public_path('images/screenshots/' . $shift->slug . '.png');
-
+            $path = public_path('images/screenshots/' . $filename);
             Browsershot::html($html)
                 ->windowSize(1200, 628)
                 ->deviceScaleFactor(2)
                 ->save($path);
-
             Image::load($path)
                 ->optimize()
                 ->save();

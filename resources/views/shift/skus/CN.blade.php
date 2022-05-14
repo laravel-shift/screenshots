@@ -1,6 +1,6 @@
 @extends('layouts.pr')
 
-@section('content')
+@section('description')
 
 <p>This pull request includes the changes for upgrading to Laravel 9.x. Feel free to commit any additional changes to the <code class="px-1 rounded bg-gray-100 text-xs">shift-{{ $number }}</code> branch.</p>
 <p><strong>Before merging</strong>, you need to:</p>
