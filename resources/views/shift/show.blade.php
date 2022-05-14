@@ -78,10 +78,6 @@ $view = view()->exists('shift.skus.' . $shift->sku) ? 'pr' : 'commits';
         </div>
     </header>
 
-    @if ($view === 'commits')
-        @include('partials.commits')
-    @elseif ($view === 'pr')
-        @includeFirst(["shift.skus.{$shift->sku}", 'partials.pr'])
-    @endif
+    @includeFirst(["shift.skus.{$shift->sku}", 'partials.commits'])
 </main>
 @endsection
