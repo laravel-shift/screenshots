@@ -237,6 +237,7 @@ class ShiftsSeeder extends Seeder
             'name' => 'Upgrade Checker',
             'sku' => 'UC',
             'type' => 'Laravel',
+            'published_at' => today(),
         ]);
         $shift->commits()->createMany([
             ['message' => 'Apply code style'],
@@ -249,12 +250,14 @@ class ShiftsSeeder extends Seeder
             'name' => 'Laravel Linter',
             'sku' => 'LL',
             'type' => 'Laravel',
+            'published_at' => today(),
         ]);
 
         $shift = Shift::create([
             'name' => 'Laravel Fixer',
             'sku' => 'LF',
             'type' => 'Laravel',
+            'published_at' => today(),
         ]);
         $shift->commits()->createMany([
             ['message' => 'Remove unnecessary `$table` property', 'info' => true],
@@ -271,6 +274,7 @@ class ShiftsSeeder extends Seeder
             'name' => 'Tests Generator',
             'sku' => 'TG',
             'type' => 'Laravel',
+            'published_at' => today(),
         ]);
         $shift->commits()->createMany([
             ['message' => 'Shift core testing files'],
@@ -286,6 +290,7 @@ class ShiftsSeeder extends Seeder
             'name' => 'Namespace Models Shift',
             'sku' => 'NM',
             'type' => 'Laravel',
+            'published_at' => today(),
         ]);
         $shift->commits()->createMany([
             ['message' => 'Shift bindings', 'info' => true],
@@ -296,6 +301,7 @@ class ShiftsSeeder extends Seeder
             'name' => 'BrowserKit Tests Converter',
             'sku' => 'T54',
             'type' => 'Laravel',
+            'published_at' => today(),
         ]);
         $shift->commits()->createMany([
             ['message' => 'Shift bindings', 'info' => true],
@@ -308,12 +314,14 @@ class ShiftsSeeder extends Seeder
             'name' => 'Namespace Consolidator',
             'sku' => 'CN',
             'type' => 'Laravel',
+            'published_at' => today(),
         ]);
 
         $shift = Shift::create([
             'name' => 'Dependency Upgrader',
             'sku' => 'DU',
             'type' => 'Laravel',
+            'published_at' => today(),
         ]);
 
 
@@ -322,6 +330,7 @@ class ShiftsSeeder extends Seeder
             'name' => 'Lumen to Laravel Shift',
             'sku' => 'LTL',
             'type' => 'Lumen',
+            'published_at' => today(),
         ]);
         $shift->commits()->createMany([
             ['message' => 'Shift bindings', 'info' => true],
@@ -406,6 +415,7 @@ class ShiftsSeeder extends Seeder
             'name' => 'Tailwind Converter',
             'sku' => 'TC',
             'type' => 'Tailwind',
+            'published_at' => today(),
         ]);
         $shift->commits()->createMany([
             ['message' => 'Add Tailwind dependencies'],
@@ -421,6 +431,7 @@ class ShiftsSeeder extends Seeder
             'name' => 'Tailwind Linter',
             'sku' => 'TL',
             'type' => 'Tailwind',
+            'published_at' => today(),
         ]);
         $shift->commits()->createMany([
             ['message' => 'Bump Tailwind dependencies'],
@@ -433,18 +444,21 @@ class ShiftsSeeder extends Seeder
             'name' => 'PSR-2 Shift',
             'sku' => 'P2',
             'type' => 'PHP',
+            'published_at' => today(),
         ]);
 
         $shift = Shift::create([
             'name' => 'PSR-4 Shift',
             'sku' => 'P4',
             'type' => 'PHP',
+            'published_at' => today(),
         ]);
 
         $shift = Shift::create([
             'name' => 'MySQL to MySQLi Shift',
             'sku' => 'MM',
             'type' => 'PHP',
+            'published_at' => today(),
         ]);
 
         $shift = Shift::create([
@@ -472,6 +486,7 @@ class ShiftsSeeder extends Seeder
             'name' => 'Pest Converter',
             'sku' => 'PP',
             'type' => 'PHP',
+            'published_at' => today(),
         ]);
         $shift->commits()->createMany([
             ['message' => 'Add Pest dependencies'],
@@ -488,6 +503,7 @@ class ShiftsSeeder extends Seeder
             'name' => 'CI Generator',
             'sku' => 'CI',
             'type' => 'PHP',
+            'published_at' => today(),
         ]);
         $shift->commits()->createMany([
             ['message' => 'Configure job for linting'],

@@ -18,7 +18,7 @@ class CreateShiftsTable extends Migration
             $table->string('name');
             $table->string('sku');
             $table->string('type');
-            $table->dateTime('published_at')->nullable();
+            $table->dateTime('published_at');
             $table->timestamps();
         });
     }
