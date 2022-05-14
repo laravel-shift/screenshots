@@ -5,28 +5,15 @@
             <div class="ml-4 left-caret relative flex-1">
                 <div class="rounded-md border border-gray-300 overflow-hidden">
                     <div class="px-4 py-2 border-b border-gray-300 bg-gray-100 text-gray-600">
-                        <b class="text-gray-700">laravel-shift</b> commented 1 minute ago
+                        <b class="text-gray-700">laravel-shift</b> commented on {{ $shift->published_at->format('M j, Y') }}}
                     </div>
                     <div class="p-4 space-y-4 text-gray-800">
-                        <p>This pull request includes the changes for upgrading to Laravel 9.x. Feel free to commit any additional changes to the <code class="px-1 rounded bg-gray-100 text-xs">shift-12345</code> branch.</p>
-                        <p><strong>Before merging</strong>, you need to:</p>
-                        <ul class="ml-6 list-disc">
-                            <li>Checkout the <code class="px-1 rounded bg-gray-100 text-xs">shift-12345</code> branch</li>
-                            <li>Review all pull request comments for additional changes</li>
-                            <li>Run <code class="px-1 rounded bg-gray-100 text-xs">composer update</code> (if the scripts fail, add <code class="px-1 rounded bg-gray-100 text-xs">--no-scripts</code>)</li>
-                            <li>Clear any config, route, or view cache</li>
-                            <li>Thoroughly test your application (no tests?, no CI?)</li>
-                        </ul>
-                        <p>If you need help with your upgrade, check out the Human Shifts. You may also join the Shifty Coders Slack workspace to level-up your Laravel skills.</p>
+                        @yield('content')
                     </div>
                 </div>
             </div>
         </div>
         <div class="ml-[4.5rem] py-8 border-l-2 border-gray-300">
-            @php
-                $minutes = rand(5, 30);
-            @endphp
-
             <div class="-ml-[1.05rem] flex items-center">
                 <div class="h-8 w-8 border-2 border-white flex items-center justify-center bg-gray-200 rounded-full">
                     <svg class="h-4 w-4 text-gray-600 fill-current" aria-hidden="true" height="16" viewBox="0 0 16 16" version="1.1" width="16" data-view-component="true">
@@ -35,13 +22,13 @@
                 </div>
                 <p class="ml-3">
                     <strong class="text-gray-800">laravel-shift</strong>
-                    <span class="text-gray-600">added {{ $shift->commits->count() }} commits {{ $minutes }} minutes ago</span>
+                    <span class="text-gray-600">added {{ $shift->commits->count() }} {{ Str::plural('commit', $shift->commits->count()) }} {{ $shift->published_at->timeAgo() }}</span>
                 </p>
             </div>
 
             <ul class="-ml-[0.7rem] pt-4 space-y-4">
             @foreach($shift->commits as $commit)
-                <li class="flex items-center justify-between">
+                    <li class="flex items-center justify-between">
                     <div class="flex items-center">
                         <div class="h-5 w-5 flex items-center justify-center bg-white">
                             <svg class="h-4 w-4 text-gray-600 fill-current" aria-hidden="true" height="16" viewBox="0 0 16 16" version="1.1" width="16">
@@ -63,7 +50,7 @@
                         <code class="ml-6 py-1 text-xs leading-5 text-gray-600">{{ implode(Arr::random(str_split('abcdef0123456789'), 7)) }}</code>
                     </div>
                 </li>
-            @endforeach
+                @endforeach
             </ul>
         </div>
     </div>
