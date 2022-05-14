@@ -23,7 +23,7 @@ class TakeScreenshot extends Command
 
             $html = view('shift.show', ['shift' => $shift])->render();
 
-            $path = public_path('images/screenshots/' . $shift->sku . '.png');
+            $path = public_path('images/screenshots/' . $shift->slug . '.png');
 
             Browsershot::html($html)
                 ->windowSize(1200, 628)
