@@ -1,7 +1,7 @@
 <div class="mt-4 flex">
     <div class="flex-1">
         <div class="flex">
-            <img src="/images/shift-avatar.png" class="inline-block h-10 w-10 border rounded-full" />
+            <img src="https://avatars.githubusercontent.com/u/15991828" class="inline-block h-10 w-10 border rounded-full" />
             <div class="ml-4 left-caret relative flex-1">
                 <div class="rounded-md border border-gray-300 overflow-hidden">
                     <div class="px-4 py-2 border-b border-gray-300 bg-gray-100 text-gray-600">
@@ -38,7 +38,7 @@
 
                         <div class="ml-3 flex items-center gap-2">
                             <img
-                                src="data:image/png;base64,{{ base64_encode(file_get_contents(public_path('images/shift-avatar.png'))) }}"
+                                src="https://avatars.githubusercontent.com/u/15991828"
                                 class="inline-block h-5 w-5 rounded-full"
                             />
                             <span class="text-gray-700 font-mono text-xs">{{ $commit->message }}</span>

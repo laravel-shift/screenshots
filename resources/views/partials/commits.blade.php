@@ -18,7 +18,7 @@
                         <p class="mt-1 flex items-center gap-1 text-gray-600 text-xs">
                             <span class="inline-flex items-center gap-1">
                                 <img
-                                    src="data:image/png;base64,{{ base64_encode(file_get_contents(public_path('images/shift-avatar.png'))) }}"
+                                    src="https://avatars.githubusercontent.com/u/15991828"
                                     class="inline-block h-5 w-5 rounded-full"
                                 />
                                 <strong class="text-gray-800">laravel-shift</strong>
