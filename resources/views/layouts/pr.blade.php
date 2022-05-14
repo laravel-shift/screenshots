@@ -22,7 +22,7 @@
                 </div>
                 <p class="ml-3">
                     <strong class="text-gray-800">laravel-shift</strong>
-                    <span class="text-gray-600">added {{ $shift->commits->count() }} {{ Str::plural('commit', $shift->commits->count()) }} {{ $shift->published_at->timeAgo() }}</span>
+                    <span class="text-gray-600">added {{ $shift->commits->count() }} {{ Str::plural('commit', $shift->commits->count()) }} {{ $shift->published_at->diffForHumans() }}</span>
                 </p>
             </div>
 
