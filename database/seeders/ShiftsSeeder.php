@@ -267,6 +267,9 @@ class ShiftsSeeder extends Seeder
             'slug' => 'laravel-linter-pr',
             'published_at' => today(),
         ]);
+        $shift->commits()->createMany([
+            ['message' => 'Add .shift to open Pull Request'],
+        ]);
 
         $shift = Shift::create([
             'name' => 'Laravel Fixer',
@@ -336,6 +339,10 @@ class ShiftsSeeder extends Seeder
             'slug' => 'consolidate-laravel-namespaces-pr',
             'published_at' => today(),
         ]);
+        $shift->commits()->createMany([
+            ['message' => 'Apply Laravel code style', 'info' => true],
+            ['message' => 'Condense `Example` into default Laravel namespace'],
+        ]);
 
         $shift = Shift::create([
             'name' => 'Dependency Upgrader',
@@ -343,6 +350,11 @@ class ShiftsSeeder extends Seeder
             'type' => 'Laravel',
             'slug' => 'upgrade-laravel-dependencies-pr',
             'published_at' => today(),
+        ]);
+        $shift->commits()->createMany([
+            ['message' => 'Shift dependencies', 'info' => true],
+            ['message' => 'Bump `laravel/framework`', 'info' => true],
+            ['message' => 'Bump `fzaninotto/faker`', 'info' => true],
         ]);
 
 
@@ -475,6 +487,9 @@ class ShiftsSeeder extends Seeder
             'slug' => 'automate-php-psr2-pr',
             'published_at' => today(),
         ]);
+        $shift->commits()->createMany([
+            ['message' => 'Apply PSR-2 code style'],
+        ]);
 
         $shift = Shift::create([
             'name' => 'PSR-4 Shift',
@@ -482,6 +497,9 @@ class ShiftsSeeder extends Seeder
             'type' => 'PHP',
             'slug' => 'automate-php-psr2-pr',
             'published_at' => today(),
+        ]);
+        $shift->commits()->createMany([
+            ['message' => 'Upgrade `Example` namespace from PSR-0 to PSR-4'],
         ]);
 
         $shift = Shift::create([
@@ -491,6 +509,11 @@ class ShiftsSeeder extends Seeder
             'slug' => 'automate-php-mysql-mysqli-pr',
             'published_at' => today(),
         ]);
+        $shift->commits()->createMany([
+            ['message' => 'Replace MySQL with equivalent MySQLi functions'],
+            ['message' => 'Add required resource link for MySQLi functions'],
+            ['message' => 'Upgrade MySQL connection for MySQLi'],
+        ]);
 
         $shift = Shift::create([
             'name' => 'PHPUnit 6 Shift',
@@ -498,6 +521,11 @@ class ShiftsSeeder extends Seeder
             'type' => 'PHP',
             'slug' => 'upgrade-phpunit-6-pr',
             'published_at' => '2017-02-03',
+        ]);
+        $shift->commits()->createMany([
+            ['message' => 'Bump `phpunit/phpunit` dependency'],
+            ['message' => 'Adopt short array syntax', 'info' => true],
+            ['message' => 'Shift to PSR-4 namespace'],
         ]);
 
         $shift = Shift::create([
@@ -507,6 +535,12 @@ class ShiftsSeeder extends Seeder
             'slug' => 'upgrade-phpunit-8-pr',
             'published_at' => '2019-02-01',
         ]);
+        $shift->commits()->createMany([
+            ['message' => 'Bump `phpunit/phpunit` dependency'],
+            ['message' => 'Adopt short array syntax', 'info' => true],
+            ['message' => 'Set return type of base TestCase methods', 'info' => true],
+            ['message' => 'Shift assertion methods', 'info' => true],
+        ]);
 
         $shift = Shift::create([
             'name' => 'PHPUnit 9 Shift',
@@ -514,6 +548,13 @@ class ShiftsSeeder extends Seeder
             'type' => 'PHP',
             'slug' => 'upgrade-phpunit-9-pr',
             'published_at' => '2020-02-07',
+        ]);
+        $shift->commits()->createMany([
+            ['message' => 'Bump `phpunit/phpunit` dependency'],
+            ['message' => 'Adopt short array syntax', 'info' => true],
+            ['message' => 'Set return type of base TestCase methods', 'info' => true],
+            ['message' => 'Convert `assertStringContains` assertion methods', 'info' => true],
+            ['message' => 'Convert `assertInternalType` assertion methods', 'info' => true],
         ]);
 
         $shift = Shift::create([
