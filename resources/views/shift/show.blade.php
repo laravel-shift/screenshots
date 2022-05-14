@@ -4,7 +4,7 @@
 
 @php
 $number = Arr::random(['62250', '57130', '53019', '52721', '42690', '39899', '34450', '29127', '28475']);
-$view = view()->exists('shift.skus' . $shift->sku) ? 'pr' : 'commits';
+$view = view()->exists('shift.skus.' . $shift->sku) ? 'pr' : 'commits';
 @endphp
 
 <main class="p-6 text-sm">
