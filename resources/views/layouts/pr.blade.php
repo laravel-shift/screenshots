@@ -28,7 +28,7 @@
 
             <ul class="-ml-[0.7rem] pt-4 space-y-4">
             @foreach($shift->commits as $commit)
-                    <li class="flex items-center justify-between">
+                <li class="flex items-center justify-between">
                     <div class="flex items-center">
                         <div class="h-5 w-5 flex items-center justify-center bg-white">
                             <svg class="h-4 w-4 text-gray-600 fill-current" aria-hidden="true" height="16" viewBox="0 0 16 16" version="1.1" width="16">
@@ -47,10 +47,28 @@
 
                     <div>
                         <span class="px-2 py-1 text-xs text-green-700 border border-gray-300 rounded-full">Verified</span>
-                        <code class="ml-6 py-1 text-xs leading-5 text-gray-600">{{ implode(Arr::random(str_split('abcdef0123456789'), 7)) }}</code>
+                        <code class="ml-6 py-1 text-xs leading-5 text-gray-600">{{ commit_sha() }}</code>
                     </div>
                 </li>
                 @endforeach
+                <li>
+                    <div class="flex items-center">
+                        <div class="h-5 w-5 flex items-center justify-center bg-github-merged text-white">
+                            <svg class="fill-current" aria-hidden="true" height="16" viewBox="0 0 16 16" width="16">
+                                <path fill-rule="evenodd" d="M5 3.254V3.25v.005a.75.75 0 110-.005v.004zm.45 1.9a2.25 2.25 0 10-1.95.218v5.256a2.25 2.25 0 101.5 0V7.123A5.735 5.735 0 009.25 9h1.378a2.251 2.251 0 100-1.5H9.25a4.25 4.25 0 01-3.8-2.346zM12.75 9a.75.75 0 100-1.5.75.75 0 000 1.5zm-8.5 4.5a.75.75 0 100-1.5.75.75 0 000 1.5z"></path>
+                            </svg>
+                        </div>
+
+                        <div class="ml-3 flex items-center gap-2">
+                            <img
+                                src="https://avatars.githubusercontent.com/u/15991828"
+                                class="inline-block h-5 w-5 rounded-full"
+                            />
+                            <span class="text-gray-700 font-mono text-xs">merged commit <b>{{ commit_sha() }}</b> into <code class="p-1 rounded-md bg-github-branch-bg text-github-branch-fg text-xs">{{ $source }}</code> {{ $shift->published_at->diffForHumans() }}</span>
+                        </div>
+                    </div>
+
+                </li>
             </ul>
         </div>
         <hr class="border-t-2 border-gray-300 w-full">

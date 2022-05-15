@@ -5,6 +5,7 @@
 @php
 $number = Arr::random(['62250', '57130', '53019', '52721', '42690', '39899', '34450', '29127', '28475']);
 $view = view()->exists('shift.skus.' . $shift->sku) ? 'pr' : 'commits';
+$source = Arr::random(['main', 'master', 'develop', 'dev']);
 @endphp
 
 <main class="p-6 text-sm">
@@ -18,9 +19,9 @@ $view = view()->exists('shift.skus.' . $shift->sku) ? 'pr' : 'commits';
                 Merged
             </span>
             <span class="ml-2 text-gray-600">
-                <span class="font-bold">{{ Arr::random(['jasonmccreary', 'jessarcher']) }}</span>
+                <span class="font-bold">jasonmccreary</span>
                 merged {{ $shift->commits->count() }} commits into
-                <code class="p-1 rounded-md bg-github-branch-bg text-github-branch-fg text-xs">{{ Arr::random(['main', 'master']) }}</code>
+                <code class="p-1 rounded-md bg-github-branch-bg text-github-branch-fg text-xs">{{ $source }}</code>
                 from
                 <code class="p-1 rounded-md bg-github-branch-bg text-github-branch-fg text-xs">shift-{{ $number }}</code>
                 <svg aria-hidden="true" height="16" viewBox="0 0 16 16" version="1.1" width="16" data-view-component="true" class="inline-block fill-current">
