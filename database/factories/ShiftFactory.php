@@ -26,6 +26,7 @@ class ShiftFactory extends Factory
             'name' => $this->faker->name,
             'type' => $this->faker->word,
             'published_at' => $this->faker->dateTime(),
+            'slug' => $this->faker->slug(),
         ];
     }
 }
