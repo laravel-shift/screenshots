@@ -3,5 +3,5 @@
 @tailwind utilities;
 
 code {
-    @apply p-1 rounded-md bg-gray-100 text-xs;
+    @apply py-0.5 px-1 rounded-md bg-gray-100 text-xs;
 }
