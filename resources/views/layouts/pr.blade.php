@@ -5,7 +5,7 @@
             <div class="ml-4 left-caret relative flex-1">
                 <div class="rounded-md border border-gray-300 overflow-hidden">
                     <div class="px-4 py-2 border-b border-gray-300 bg-gray-100 text-gray-600">
-                        <b class="text-gray-700">laravel-shift</b> commented on {{ $shift->published_at->format('M j, Y') }}}
+                        <b class="text-gray-700">laravel-shift</b> commented on {{ $shift->published_at->format('M j, Y') }}
                     </div>
                     <div class="p-4 space-y-4 text-gray-800">
                         @yield('description')
