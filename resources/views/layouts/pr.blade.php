@@ -61,7 +61,7 @@
 
                         <div class="ml-3 flex items-center gap-2">
                             <img
-                                src="https://avatars.githubusercontent.com/u/15991828"
+                                src="https://avatars.githubusercontent.com/u/161071"
                                 class="inline-block h-5 w-5 rounded-full"
                             />
                             <span class="text-gray-700 font-mono text-xs">merged commit <b>{{ commit_sha() }}</b> into <code class="p-1 rounded-md bg-github-branch-bg text-github-branch-fg text-xs">{{ $source }}</code> {{ $shift->published_at->diffForHumans() }}</span>
@@ -83,7 +83,7 @@
                 </svg>
             </div>
             <div class="mt-3 text-gray-600 text-xs">
-                <img class="w-5 h-5 rounded-full mr-1" src="https://avatars.githubusercontent.com/u/426251?s=40&amp;v=4">
+                <img class="w-5 h-5 rounded-full mr-1" src="https://avatars.githubusercontent.com/u/4977161?s=40&amp;v=4">
                 <span class="font-semibold">jessarcher</span>
             </div>
         </div>
