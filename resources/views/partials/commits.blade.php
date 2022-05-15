@@ -14,7 +14,7 @@
             @foreach($shift->commits as $commit)
                 <div class="px-4 py-2 flex justify-between items-center">
                     <div>
-                        <h3 class="font-semibold text-gray-800">{{ Str::markdown($commit->message) }}</h3>
+                        <h3 class="font-semibold text-gray-800">{{{ markdown($commit->message) }}}</h3>
                         <p class="mt-1 flex items-center gap-1 text-gray-600 text-xs">
                             <span class="inline-flex items-center gap-1">
                                 <img

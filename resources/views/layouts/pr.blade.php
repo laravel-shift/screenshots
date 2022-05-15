@@ -41,7 +41,7 @@
                                 src="https://avatars.githubusercontent.com/u/15991828"
                                 class="inline-block h-5 w-5 rounded-full"
                             />
-                            <span class="text-gray-700 font-mono text-xs">{{ $commit->message }}</span>
+                            <span class="text-gray-700 font-mono text-xs">{{{ markdown($commit->message) }}}</span>
                         </div>
                     </div>
 
