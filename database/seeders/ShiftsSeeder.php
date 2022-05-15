@@ -268,7 +268,7 @@ class ShiftsSeeder extends Seeder
             'published_at' => today(),
         ]);
         $shift->commits()->createMany([
-            ['message' => 'Add .shift to open Pull Request'],
+            ['message' => 'Add `.shift` to open Pull Request'],
         ]);
 
         $shift = Shift::create([
