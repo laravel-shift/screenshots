@@ -83,7 +83,8 @@
                 </svg>
             </div>
             <div class="mt-3 text-gray-600 text-xs">
-                No reviews
+                <img class="w-5 h-5 rounded-full mr-1" src="https://avatars.githubusercontent.com/u/426251?s=40&amp;v=4">
+                <span class="font-semibold">jessarcher</span>
             </div>
         </div>
         <div class="py-4">
