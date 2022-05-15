@@ -47,6 +47,11 @@
 
                     <div>
                         <span class="px-2 py-1 text-xs text-green-700 border border-gray-300 rounded-full">Verified</span>
+                        @if ($loop->last)
+                            <svg role="img" height="16" viewBox="0 0 16 16" version="1.1" width="16" class="inline-block fill-current text-green-700">
+                                <path fill-rule="evenodd" d="M13.78 4.22a.75.75 0 010 1.06l-7.25 7.25a.75.75 0 01-1.06 0L2.22 9.28a.75.75 0 011.06-1.06L6 10.94l6.72-6.72a.75.75 0 011.06 0z"></path>
+                            </svg>
+                        @endif
                         <code class="ml-6 py-1 text-xs leading-5 text-gray-600">{{ commit_sha() }}</code>
                     </div>
                 </li>
@@ -59,12 +64,15 @@
                             </svg>
                         </div>
 
-                        <div class="ml-3 flex items-center gap-2">
-                            <img
-                                src="https://avatars.githubusercontent.com/u/161071"
-                                class="inline-block h-5 w-5 rounded-full"
-                            />
-                            <span class="text-gray-700 font-mono text-xs">merged commit <b>{{ commit_sha() }}</b> into <code class="p-1 rounded-md bg-github-branch-bg text-github-branch-fg text-xs">{{ $source }}</code> {{ $shift->published_at->diffForHumans() }}</span>
+                        <div>
+                            <div class="ml-3 flex items-center gap-2">
+                                <img
+                                    src="https://avatars.githubusercontent.com/u/161071"
+                                    class="inline-block h-5 w-5 rounded-full"
+                                />
+                                <span class="text-gray-700 text-xs">merged commit <b>{{ commit_sha() }}</b> into <code class="p-1 rounded-md bg-github-branch-bg text-github-branch-fg text-xs">{{ $source }}</code> {{ $shift->published_at->diffForHumans() }}</span>
+                            </div>
+                            <p class="text-gray-700 text-xs">1 check passed</p>
                         </div>
                     </div>
                 </li>
