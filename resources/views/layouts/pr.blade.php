@@ -59,14 +59,14 @@
                 </li>
                 @endforeach
                 <li>
-                    <div class="flex items-center content-start">
+                    <div class="flex items-baseline">
                         <div class="h-6 w-6 flex items-center justify-center bg-github-merged text-white rounded-full">
                             <svg class="fill-current" aria-hidden="true" height="16" viewBox="0 0 16 16" width="16">
                                 <path fill-rule="evenodd" d="M5 3.254V3.25v.005a.75.75 0 110-.005v.004zm.45 1.9a2.25 2.25 0 10-1.95.218v5.256a2.25 2.25 0 101.5 0V7.123A5.735 5.735 0 009.25 9h1.378a2.251 2.251 0 100-1.5H9.25a4.25 4.25 0 01-3.8-2.346zM12.75 9a.75.75 0 100-1.5.75.75 0 000 1.5zm-8.5 4.5a.75.75 0 100-1.5.75.75 0 000 1.5z"></path>
                             </svg>
                         </div>
 
-                        <div class="ml-3">
+                        <div class="ml-2">
                             <div class="flex items-center gap-2">
                                 <img
                                     src="https://avatars.githubusercontent.com/u/161071"
