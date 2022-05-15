@@ -53,6 +53,7 @@
                 @endforeach
             </ul>
         </div>
+        <hr class="border-t-2 border-gray-300 w-full">
     </div>
 
     <div class="ml-5 w-80 divide-y">
