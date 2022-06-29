@@ -357,6 +357,24 @@ class ShiftsSeeder extends Seeder
             ['message' => 'Bump `fzaninotto/faker`', 'info' => true],
         ]);
 
+        $shift = Shift::create([
+            'name' => 'Vite Converter',
+            'sku' => 'VC',
+            'type' => 'Laravel',
+            'slug' => 'convert-laravel-mix-to-vite',
+            'published_at' => '2022-06-28',
+        ]);
+        $shift->commits()->createMany([
+            ['message' => 'Add npm dependencies'],
+            ['message' => 'Update npm scripts'],
+            ['message' => 'Configure Vite'],
+            ['message' => 'Use ES modules'],
+            ['message' => 'Rename ENV variables'],
+            ['message' => 'Use new `@vite` Blade directive'],
+            ['message' => 'Convert test helpers'],
+            ['message' => 'Update build command references'],
+        ]);
+
 
         // Lumen
         $shift = Shift::create([
