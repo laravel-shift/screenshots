@@ -607,5 +607,24 @@ class ShiftsSeeder extends Seeder
             ['message' => 'Configure job for tests'],
             ['message' => 'Configure job for Dusk'],
         ]);
+
+
+        // Django
+        $shift = Shift::create([
+            'name' => 'Django 4.1 Shift',
+            'sku' => 'D41',
+            'type' => 'Django',
+            'slug' => 'upgrade-django-41-pr',
+            'published_at' => today(),
+        ]);
+        $shift->commits()->createMany([
+            ['message' => 'Bump dependencies'],
+            ['message' => 'Use `non_form_errors` property'],
+            ['message' => 'Remove `default_app_config` variable'],
+            ['message' => 'Rename `whitelist` references within `EmailValidator`'],
+            ['message' => 'Update deprecated `nulls_first` and `nulls_last` values'],
+            ['message' => 'Replace `get_key_columns` call with `get_relations`'],
+            ['message' => 'Replace undocumented `SuccessURLAllowedHostsMixin`'],
+        ]);
     }
 }
