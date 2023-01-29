@@ -245,6 +245,24 @@ class ShiftsSeeder extends Seeder
             ['message' => 'Bump Laravel dependencies'],
         ]);
 
+        $shift = Shift::create([
+            'name' => 'Laravel 10.x Shift',
+            'sku' => '10',
+            'type' => 'Laravel',
+            'slug' => 'upgrade-laravel-10-pr',
+            'published_at' => '2023-02-07',
+        ]);
+        $shift->commits()->createMany([
+            ['message' => 'Shift core files'],
+            ['message' => 'Convert `optional()` to nullsafe operator'],
+            ['message' => 'Use Faker methods', 'info' => true],
+            ['message' => 'Convert removed `$dates` property to `$casts`'],
+            ['message' => 'Add type hints for Laravel 10'],
+            ['message' => 'Remove redundant typing in DocBlocks'],
+            ['message' => 'Bump Laravel dependencies'],
+            ['message' => 'Shift config files'],
+        ]);
+
         // additional Shifts
         $shift = Shift::create([
             'name' => 'Upgrade Checker',
