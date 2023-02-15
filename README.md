@@ -41,5 +41,5 @@ npm run dev
 Then, run the application:
 
 ```shell
-php artisan serve
+php artisan serve -p
 ```
