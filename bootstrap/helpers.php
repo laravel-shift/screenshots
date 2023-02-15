@@ -37,7 +37,7 @@ function plus_changes($shift)
         return 1107;
     }
 
-    reuturn rand(80, 200);
+    return rand(80, 200);
 }
 
 function minus_changes($shift)
@@ -46,5 +46,5 @@ function minus_changes($shift)
         return 1403;
     }
 
-    reuturn rand(80, 200);
+    return rand(80, 200);
 }
