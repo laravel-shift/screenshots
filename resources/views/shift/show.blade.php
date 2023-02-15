@@ -61,13 +61,13 @@ $source = Arr::random(['main', 'master', 'develop', 'dev']);
                         <path fill-rule="evenodd" d="M2.75 1.5a.25.25 0 00-.25.25v12.5c0 .138.112.25.25.25h10.5a.25.25 0 00.25-.25V4.664a.25.25 0 00-.073-.177l-2.914-2.914a.25.25 0 00-.177-.073H2.75zM1 1.75C1 .784 1.784 0 2.75 0h7.586c.464 0 .909.184 1.237.513l2.914 2.914c.329.328.513.773.513 1.237v9.586A1.75 1.75 0 0113.25 16H2.75A1.75 1.75 0 011 14.25V1.75zm7 1.5a.75.75 0 01.75.75v1.5h1.5a.75.75 0 010 1.5h-1.5v1.5a.75.75 0 01-1.5 0V7h-1.5a.75.75 0 010-1.5h1.5V4A.75.75 0 018 3.25zm-3 8a.75.75 0 01.75-.75h4.5a.75.75 0 010 1.5h-4.5a.75.75 0 01-.75-.75z"></path>
                     </svg>
                     <span>Files changed</span>
-                    <span class="px-2 py-1 bg-gray-100 rounded-full text-sm">{{ $shift->isTailwind() ? Arr::random([23, 39, 42, 56, 63]) : Arr::random([63, 76, 82, 91, 103, 111, 123, 142, 256]) }}</span>
+                    <span class="px-2 py-1 bg-gray-100 rounded-full text-sm">{{ files_changed($shift) }}</span>
                 </span>
             </nav>
 
             <span>
-                <span class="text-xs text-green-700 font-bold">&plus;{{ rand(80, 200) }}</span>
-                <span class="text-xs text-red-700 font-bold">&minus;{{ rand(80, 200) }}</span>
+                <span class="text-xs text-green-700 font-bold">&plus;{{ plus_changes($shift) }}</span>
+                <span class="text-xs text-red-700 font-bold">&minus;{{ minus_changes($shift) }}</span>
                 <span class="inline-flex space-x-px">
                     <span class="inline-block h-2 w-2 bg-green-600"></span>
                     <span class="inline-block h-2 w-2 bg-green-600"></span>

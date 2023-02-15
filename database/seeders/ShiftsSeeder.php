@@ -250,7 +250,7 @@ class ShiftsSeeder extends Seeder
             'sku' => '10',
             'type' => 'Laravel',
             'slug' => 'upgrade-laravel-10-pr',
-            'published_at' => '2023-02-07',
+            'published_at' => '2023-02-14',
         ]);
         $shift->commits()->createMany([
             ['message' => 'Shift core files'],
