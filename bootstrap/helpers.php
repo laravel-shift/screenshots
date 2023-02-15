@@ -17,3 +17,34 @@ function commit_sha()
 {
     return substr(str_shuffle('abcdef0123456789'), 0, 7);
 }
+
+function files_changed($shift)
+{
+    if ($shift->isTailwind()) {
+        Arr::random([23, 39, 42, 56, 63]);
+    }
+
+    if ($shift->sku === '10') {
+        return 307;
+    }
+
+    return Arr::random([63, 76, 82, 91, 103, 111, 123, 142, 256]);
+}
+
+function plus_changes($shift)
+{
+    if ($shift->sku === '10') {
+        return 1107;
+    }
+
+    reuturn rand(80, 200);
+}
+
+function minus_changes($shift)
+{
+    if ($shift->sku === '10') {
+        return 1403;
+    }
+
+    reuturn rand(80, 200);
+}
