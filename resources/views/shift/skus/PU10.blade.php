@@ -1,7 +1,7 @@
 @extends('layouts.pr')
 
 @section('description')
-<p>This pull request contains changes for upgrading to <a class="text-blue-500" href="https://phpunit.de/announcements/phpunit-9.html">PHPUnit 9</a> automated by the <a class="text-blue-500" href="https://laravelshift.com/upgrade-phpunit-9">PHPUnit 9 Shift</a>.</p>
+<p>This pull request contains changes for upgrading to <a class="text-blue-500" href="https://phpunit.de/announcements/phpunit-10.html">PHPUnit 10</a> automated by the <a class="text-blue-500" href="https://laravelshift.com/upgrade-phpunit-10">PHPUnit 10 Shift</a>.</p>
 
 <p><strong>Before merging</strong>, you need to:</p>
 
