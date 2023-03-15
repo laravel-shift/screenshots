@@ -594,6 +594,24 @@ class ShiftsSeeder extends Seeder
         ]);
 
         $shift = Shift::create([
+            'name' => 'PHPUnit 10 Shift',
+            'sku' => 'PU10',
+            'type' => 'PHP',
+            'slug' => 'upgrade-phpunit-10-pr',
+            'published_at' => '2023-02-03',
+        ]);
+        $shift->commits()->createMany([
+            ['message' => 'Bump PHPUnit dependencies'],
+            ['message' => 'Shift configuration'],
+            ['message' => 'Ignore PHPUnit cache folder', 'info' => true],
+            ['message' => 'Rename core assertions'],
+            ['message' => 'Declare data providers as `static`'],
+            ['message' => 'Adopt PHP attributes in test classes'],
+            ['message' => 'Add return types to test methods'],
+            ['message' => 'Define test classes as `final`'],
+        ]);
+
+        $shift = Shift::create([
             'name' => 'Pest Converter',
             'sku' => 'PP',
             'type' => 'PHP',
