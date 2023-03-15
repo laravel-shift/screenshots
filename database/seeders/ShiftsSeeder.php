@@ -602,9 +602,11 @@ class ShiftsSeeder extends Seeder
         ]);
         $shift->commits()->createMany([
             ['message' => 'Bump PHPUnit dependencies'],
-            ['message' => 'Set return type of base TestCase methods', 'info' => true],
+            ['message' => 'Shift configuration'],
             ['message' => 'Ignore PHPUnit cache folder', 'info' => true],
-            ['message' => 'Adopt PHP attributes'],
+            ['message' => 'Rename core assertions'],
+            ['message' => 'Declare data providers as `static`'],
+            ['message' => 'Adopt PHP attributes in test classes'],
             ['message' => 'Add return types to test methods'],
             ['message' => 'Define test classes as `final`'],
         ]);
