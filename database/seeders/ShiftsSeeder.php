@@ -602,7 +602,6 @@ class ShiftsSeeder extends Seeder
         ]);
         $shift->commits()->createMany([
             ['message' => 'Bump PHPUnit dependencies'],
-            ['message' => 'Shift configuration'],
             ['message' => 'Ignore PHPUnit cache folder', 'info' => true],
             ['message' => 'Rename core assertions'],
             ['message' => 'Declare data providers as `static`'],
