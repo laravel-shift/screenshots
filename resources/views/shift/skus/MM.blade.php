@@ -11,6 +11,6 @@
 <li class="mb-1">Thoroughly test your application</li>
 </ul>
 
-<p>If you need help with your upgrade, check out the <a class="text-blue-500" href="https://laravelshift.com/human-shifts">Human Shifts</a>. You may also join the <a class="text-blue-500" href="https://laravelshift.com/shifty-coders">Shifty Coders</a> Slack workspace to level-up your Laravel skills.</p>
+<p>If you need help with your upgrade, check out the <a class="text-blue-500" href="https://laravelshift.com/human-shifts">Human Shifts</a>.</p>
 
 @endsection

@@ -404,6 +404,19 @@ class ShiftsSeeder extends Seeder
             ['message' => 'Add `.shift` to open Pull Request'],
         ]);
 
+        $shift = Shift::create([
+            'name' => 'HTML Converter',
+            'sku' => 'HC',
+            'type' => 'Laravel',
+            'slug' => 'convert-laravelcollective-html-to-spatie-laravel-html',
+            'published_at' => '2023-08-31',
+        ]);
+        $shift->commits()->createMany([
+            ['message' => 'Swap dependencies'],
+            ['message' => 'Convert `Form` facade'],
+            ['message' => 'Convert `Html` facade'],
+            ['message' => 'Convert Blade directives'],
+        ]);
 
         // Lumen
         $shift = Shift::create([
