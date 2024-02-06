@@ -7,7 +7,7 @@ function markdown($content, $inline = true)
 {
     $html = Str::markdown($content);
 
-    if (!$inline) {
+    if (! $inline) {
         return $html;
     }
 

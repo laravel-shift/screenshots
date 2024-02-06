@@ -684,7 +684,6 @@ class ShiftsSeeder extends Seeder
             ['message' => 'Configure job for Dusk'],
         ]);
 
-
         // Django
         $shift = Shift::create([
             'name' => 'Django 4.1 Shift',

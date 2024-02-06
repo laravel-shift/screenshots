@@ -27,7 +27,6 @@ class ShiftControllerTest extends TestCase
         $response->assertViewHas('shifts');
     }
 
-
     /**
      * @test
      */
