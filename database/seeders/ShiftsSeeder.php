@@ -276,7 +276,6 @@ class ShiftsSeeder extends Seeder
             ['message' => 'Convert `$casts` property to method'],
             ['message' => 'Re-register HTTP middleware'],
             ['message' => 'Re-register exceptions'],
-            ['message' => 'Re-register routes'],
             ['message' => 'Re-register scheduled commands'],
             ['message' => 'Bump Composer dependencies'],
         ]);
