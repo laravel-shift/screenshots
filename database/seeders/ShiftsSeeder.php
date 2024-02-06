@@ -393,6 +393,17 @@ class ShiftsSeeder extends Seeder
             ['message' => 'Update build command references'],
         ]);
 
+        $shift = Shift::create([
+            'name' => 'April Fools\' Shift',
+            'sku' => 'AF',
+            'type' => 'Laravel',
+            'slug' => 'laravel-april-fools-pr',
+            'published_at' => '2023-04-01',
+        ]);
+        $shift->commits()->createMany([
+            ['message' => 'Add `.shift` to open Pull Request'],
+        ]);
+
 
         // Lumen
         $shift = Shift::create([
