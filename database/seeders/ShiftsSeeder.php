@@ -263,6 +263,24 @@ class ShiftsSeeder extends Seeder
             ['message' => 'Shift config files'],
         ]);
 
+        $shift = Shift::create([
+            'name' => 'Laravel 11.x Shift',
+            'sku' => '11',
+            'type' => 'Laravel',
+            'slug' => 'upgrade-laravel-11-pr',
+            'published_at' => '2024-02-06',
+        ]);
+        $shift->commits()->createMany([
+            ['message' => 'Remove default `app` files'],
+            ['message' => 'Streamline config files'],
+            ['message' => 'Convert `$casts` property to method'],
+            ['message' => 'Re-register HTTP middleware'],
+            ['message' => 'Re-register exceptions'],
+            ['message' => 'Re-register routes'],
+            ['message' => 'Re-register scheduled commands'],
+            ['message' => 'Bump Composer dependencies'],
+        ]);
+
         // additional Shifts
         $shift = Shift::create([
             'name' => 'Upgrade Checker',
