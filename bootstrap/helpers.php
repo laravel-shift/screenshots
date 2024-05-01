@@ -29,7 +29,7 @@ function files_changed($shift)
         return 307;
     }
 
-    if ($shift->sku === '11') {
+    if (in_array($shift->sku, ['11', 'LS'])) {
         return Arr::random(range(30, 63));
     }
 
@@ -51,7 +51,7 @@ function minus_changes($shift)
         return 1403;
     }
 
-    if ($shift->sku === '11') {
+    if (in_array($shift->sku, ['10', '11', 'LS'])) {
         return rand(1000, 2000);
     }
 

@@ -268,7 +268,7 @@ class ShiftsSeeder extends Seeder
             'sku' => '11',
             'type' => 'Laravel',
             'slug' => 'upgrade-laravel-11-pr',
-            'published_at' => '2024-02-06',
+            'published_at' => '2024-03-12',
         ]);
         $shift->commits()->createMany([
             ['message' => 'Remove default `app` files'],
@@ -322,6 +322,23 @@ class ShiftsSeeder extends Seeder
             ['message' => 'Convert to helper methods', 'info' => true],
             ['message' => 'Modernize Blade directives', 'info' => true],
             ['message' => 'Leverage command autoloading', 'info' => true],
+        ]);
+
+        $shift = Shift::create([
+            'name' => 'Laravel Slimmer',
+            'sku' => 'LS',
+            'type' => 'Laravel',
+            'slug' => 'laravel-slimmer-pr',
+            'published_at' => today(),
+        ]);
+        $shift->commits()->createMany([
+            ['message' => 'Remove default `app` files'],
+            ['message' => 'Streamline config files'],
+            ['message' => 'Set new `ENV` variables'],
+            ['message' => 'Consolidate service providers'],
+            ['message' => 'Re-register HTTP middleware'],
+            ['message' => 'Re-register exception handling'],
+            ['message' => 'Re-register scheduled commands'],
         ]);
 
         $shift = Shift::create([
