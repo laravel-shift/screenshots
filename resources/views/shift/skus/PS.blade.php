@@ -2,8 +2,8 @@
 
 @section('description')
 
-<p>This pull request contains changes from the <a class="text-blue-500" href="https://laravelshift.com/laravel-preshift">Laravel PreShift</a> to give you a feel for upgrading with <a class="text-blue-500" href="https://laravelshift.com">Shift</a>. All Shifts open a pull request with the changes in nice, atomic commits. This allows you to review each change in isolation.</p>
-<p>Shifts also leave comments with details on any additional changes you may need to make, or changes you may want to make to follow the latest Laravel conventions.</p>
+<p>This pull request contains changes from the <a class="text-blue-500" href="https://laravelshift.com/laravel-preshift">Laravel PreShift</a> to give you a feel for upgrading with <a class="text-blue-500" href="https://laravelshift.com">Shift</a>.</p>
+<p>All Shifts open a pull request in a separate branch with the changes in nice, atomic commits. This allows you to review each change in isolation. Shifts also leave comments with details on any additional changes you may need to make, or changes you may want to make to follow the latest Laravel conventions.</p>
 
 <p>To review a Shift:</p>
 
