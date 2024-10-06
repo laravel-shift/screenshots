@@ -452,6 +452,19 @@ class ShiftsSeeder extends Seeder
             ['message' => 'Convert Blade directives'],
         ]);
 
+        $shift = Shift::create([
+            'name' => 'Laravel PreShift',
+            'sku' => 'PS',
+            'type' => 'Laravel',
+            'slug' => 'upgrade-laravel-preshift',
+            'published_at' => '2024-10-01',
+        ]);
+        $shift->commits()->createMany([
+            ['message' => 'Adopt short array syntax', 'info' => true],
+            ['message' => 'Convert string references to `::class`', 'info' => true],
+            ['message' => 'Apply code style', 'info' => true],
+        ]);
+
         // Lumen
         $shift = Shift::create([
             'name' => 'Lumen to Laravel Shift',
