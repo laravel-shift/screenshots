@@ -456,7 +456,7 @@ class ShiftsSeeder extends Seeder
             'name' => 'Laravel PreShift',
             'sku' => 'PS',
             'type' => 'Laravel',
-            'slug' => 'upgrade-laravel-preshift',
+            'slug' => 'upgrade-laravel-guide',
             'published_at' => '2024-10-01',
         ]);
         $shift->commits()->createMany([
