@@ -2,7 +2,6 @@
 
 namespace Database\Factories;
 
-use App\Models\Commit;
 use Illuminate\Database\Eloquent\Factories\Factory;
 
 class CommitFactory extends Factory
