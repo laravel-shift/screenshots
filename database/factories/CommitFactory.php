@@ -22,8 +22,8 @@ class CommitFactory extends Factory
     public function definition()
     {
         return [
-            'message' => $this->faker->word,
-            'info' => $this->faker->boolean,
+            'message' => $this->faker->word(),
+            'info' => $this->faker->boolean(),
         ];
     }
 }
