@@ -7,7 +7,7 @@ use Illuminate\Database\Seeder;
 
 class ShiftsSeeder extends Seeder
 {
-    public function run()
+    public function run(): void
     {
         // Laravel
         $shift = Shift::create([

@@ -13,7 +13,7 @@ class TakeScreenshot extends Command
 
     protected $description = 'Take screenshot of the given Shift or all Shifts';
 
-    public function handle()
+    public function handle(): int
     {
         $shifts = is_null($this->argument('shift')) ? Shift::all()
             : [Shift::where('sku', $this->argument('shift'))->firstOrFail()];

@@ -16,7 +16,7 @@ class ShiftControllerTest extends TestCase
     /**
      * @test
      */
-    public function index_displays_view()
+    public function index_displays_view(): void
     {
         $shifts = Shift::factory()->count(3)->create();
 
@@ -30,7 +30,7 @@ class ShiftControllerTest extends TestCase
     /**
      * @test
      */
-    public function show_displays_view()
+    public function show_displays_view(): void
     {
         $shift = Shift::factory()->create();
 
