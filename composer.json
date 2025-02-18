@@ -12,7 +12,8 @@
         "ext-gd": "*",
         "laravel/framework": "^11.42",
         "laravel/tinker": "^2.9",
-        "spatie/browsershot": "^5.0"
+        "spatie/browsershot": "^5.0",
+        "spatie/image": "^3.8"
     },
     "require-dev": {
         "fakerphp/faker": "^1.23",
