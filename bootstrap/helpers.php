@@ -3,7 +3,7 @@
 use Illuminate\Support\Arr;
 use Illuminate\Support\Str;
 
-function markdown($content, $inline = true)
+function markdown($content, $inline = true): string
 {
     $html = Str::markdown($content);
 
@@ -14,12 +14,12 @@ function markdown($content, $inline = true)
     return preg_replace('/<p>(.+)<\/p>/', '$1', $html);
 }
 
-function commit_sha()
+function commit_sha(): string
 {
     return substr(str_shuffle('abcdef0123456789'), 0, 7);
 }
 
-function files_changed($shift)
+function files_changed($shift): int
 {
     if ($shift->isTailwind()) {
         return Arr::random([23, 39, 42, 56, 63]);
@@ -29,14 +29,14 @@ function files_changed($shift)
         return 307;
     }
 
-    if (in_array($shift->sku, ['11', 'LS'])) {
+    if (in_array($shift->sku, ['11', '12', 'LS'])) {
         return Arr::random(range(30, 63));
     }
 
     return Arr::random([63, 76, 82, 91, 103, 111, 123, 142, 256]);
 }
 
-function plus_changes($shift)
+function plus_changes($shift): int
 {
     if ($shift->sku === '10') {
         return 1107;
@@ -45,7 +45,7 @@ function plus_changes($shift)
     return rand(80, 200);
 }
 
-function minus_changes($shift)
+function minus_changes($shift): int
 {
     if ($shift->sku === '10') {
         return 1403;
