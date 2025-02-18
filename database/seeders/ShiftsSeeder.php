@@ -280,6 +280,24 @@ class ShiftsSeeder extends Seeder
             ['message' => 'Bump Composer dependencies'],
         ]);
 
+        $shift = Shift::create([
+            'name' => 'Laravel 12.x Shift',
+            'sku' => '12',
+            'type' => 'Laravel',
+            'slug' => 'upgrade-laravel-12-pr',
+            'published_at' => '2025-02-24',
+        ]);
+        $shift->commits()->createMany([
+            ['message' => 'Adopt new PHP Attributes'],
+            ['message' => 'Dispatch jobs directly'],
+            ['message' => 'Use `Gate` facade for controller authorization'],
+            ['message' => 'Remove unused `ValidatesRequests` trait'],
+            ['message' => 'Modernize controller middleware'],
+            ['message' => 'Remove base controller inheritance'],
+            ['message' => 'Add new Laravel `composer run dev` script'],
+            ['message' => 'Bump Composer dependencies'],
+        ]);
+
         // additional Shifts
         $shift = Shift::create([
             'name' => 'Upgrade Checker',
