@@ -11,7 +11,7 @@ class CommitFactory extends Factory
      *
      * @return array
      */
-    public function definition()
+    public function definition(): array
     {
         return [
             'message' => $this->faker->word(),

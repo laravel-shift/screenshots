@@ -2,6 +2,7 @@
 
 namespace App\Models;
 
+use Illuminate\Database\Eloquent\Relations\HasMany;
 use Illuminate\Database\Eloquent\Factories\HasFactory;
 use Illuminate\Database\Eloquent\Model;
 
@@ -21,7 +22,7 @@ class Shift extends Model
         'published_at' => 'datetime',
     ];
 
-    public function commits()
+    public function commits(): HasMany
     {
         return $this->hasMany(Commit::class);
     }
