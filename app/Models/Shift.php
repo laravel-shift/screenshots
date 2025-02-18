@@ -17,10 +17,13 @@ class Shift extends Model
         'published_at',
     ];
 
-    protected $casts = [
-        'id' => 'integer',
-        'published_at' => 'datetime',
-    ];
+    protected function casts(): array
+    {
+        return [
+            'id' => 'integer',
+            'published_at' => 'datetime',
+        ];
+    }
 
     public function commits(): HasMany
     {

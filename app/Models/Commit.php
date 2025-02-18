@@ -14,9 +14,12 @@ class Commit extends Model
         'info',
     ];
 
-    protected $casts = [
-        'id' => 'integer',
-        'shift_id' => 'integer',
-        'info' => 'boolean',
-    ];
+    protected function casts(): array
+    {
+        return [
+            'id' => 'integer',
+            'shift_id' => 'integer',
+            'info' => 'boolean',
+        ];
+    }
 }
