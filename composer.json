@@ -12,7 +12,6 @@
         "ext-gd": "*",
         "guzzlehttp/guzzle": "^7.2",
         "laravel/framework": "^9.52",
-        "laravel/sanctum": "^3.0",
         "laravel/tinker": "^2.7",
         "spatie/browsershot": "^3.52"
     },
