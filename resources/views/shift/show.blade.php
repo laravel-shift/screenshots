@@ -3,7 +3,7 @@
 @section('content')
 
 @php
-$number = Arr::random(['62250', '57130', '53019', '52721', '42690', '39899', '34450', '29127', '28475']);
+$number = intval($shift->sku) ? (intval($shift->sku) * 11000 + rand(111, 8200)) : Arr::random(['62250', '57130', '53019', '52721', '42690', '39899', '34450', '29127', '28475']);
 $view = view()->exists('shift.skus.' . $shift->sku) ? 'pr' : 'commits';
 $source = Arr::random(['main', 'master', 'develop', 'dev']);
 @endphp
