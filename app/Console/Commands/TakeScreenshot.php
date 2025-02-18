@@ -25,10 +25,12 @@ class TakeScreenshot extends Command
             $html = view('shift.show', ['shift' => $shift])->render();
 
             $path = public_path('images/screenshots/'.$filename);
+
             Browsershot::html($html)
                 ->windowSize(1200, 628)
                 ->deviceScaleFactor(2)
                 ->save($path);
+
             Image::load($path)
                 ->optimize()
                 ->save();
