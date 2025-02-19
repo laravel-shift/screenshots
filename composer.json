@@ -10,7 +10,7 @@
     "require": {
         "php": "^8.2",
         "ext-gd": "*",
-        "laravel/framework": "^11.42",
+        "laravel/framework": "^11.43",
         "laravel/tinker": "^2.9",
         "spatie/browsershot": "^5.0",
         "spatie/image": "^3.8"
