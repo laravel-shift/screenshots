@@ -288,7 +288,7 @@ class ShiftsSeeder extends Seeder
             'published_at' => '2025-02-24',
         ]);
         $shift->commits()->createMany([
-            ['message' => 'Adopt new PHP Attributes'],
+            ['message' => 'Adopt new PHP attributes in models'],
             ['message' => 'Dispatch jobs directly'],
             ['message' => 'Use `Gate` facade for controller authorization'],
             ['message' => 'Remove unused `ValidatesRequests` trait'],
