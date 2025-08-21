@@ -483,6 +483,22 @@ class ShiftsSeeder extends Seeder
             ['message' => 'Apply code style', 'info' => true],
         ]);
 
+        $shift = Shift::create([
+            'name' => 'Dusk Converter',
+            'sku' => 'DC',
+            'type' => 'Laravel',
+            'slug' => 'convert-laravel-dusk-to-pest-browser-tests',
+            'published_at' => '2025-08-21',
+        ]);
+        $shift->commits()->createMany([
+            ['message' => 'Add dependencies'],
+            ['message' => 'Convert Dusk tests classes to Pest'],
+            ['message' => 'Convert to Pest Browser Testing API'],
+            ['message' => 'Rename `dusk` HTML attribute'],
+            ['message' => 'Remove Dusk core files'],
+            ['message' => 'Swap test runner'],
+        ]);
+
         // Lumen
         $shift = Shift::create([
             'name' => 'Lumen to Laravel Shift',
