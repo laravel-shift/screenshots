@@ -492,10 +492,10 @@ class ShiftsSeeder extends Seeder
         ]);
         $shift->commits()->createMany([
             ['message' => 'Add dependencies'],
-            ['message' => 'Convert Dusk tests classes to Pest'],
+            ['message' => 'Convert Dusk test classes to Pest'],
             ['message' => 'Convert to Pest Browser Testing API'],
             ['message' => 'Rename `dusk` HTML attribute'],
-            ['message' => 'Remove Dusk core files'],
+            ['message' => 'Remove core Dusk classes'],
             ['message' => 'Swap test runner'],
         ]);
 
