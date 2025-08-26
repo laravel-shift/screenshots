@@ -491,12 +491,12 @@ class ShiftsSeeder extends Seeder
             'published_at' => '2025-08-21',
         ]);
         $shift->commits()->createMany([
-            ['message' => 'Add dependencies'],
             ['message' => 'Convert Dusk tests classes to Pest'],
+            ['message' => 'Add dependencies'],
+            ['message' => 'Remove Dusk core files'],
+            ['message' => 'Configure Pest Browser Testing'],
             ['message' => 'Convert to Pest Browser Testing API'],
             ['message' => 'Rename `dusk` HTML attribute'],
-            ['message' => 'Remove Dusk core files'],
-            ['message' => 'Swap test runner'],
         ]);
 
         // Lumen
@@ -709,6 +709,36 @@ class ShiftsSeeder extends Seeder
             ['message' => 'Bump PHPUnit dependencies'],
             ['message' => 'Ignore PHPUnit cache folder', 'info' => true],
             ['message' => 'Rename core assertions'],
+            ['message' => 'Declare data providers as `static`'],
+            ['message' => 'Adopt PHP attributes in test classes'],
+            ['message' => 'Add return types to test methods'],
+            ['message' => 'Define test classes as `final`'],
+        ]);
+
+        $shift = Shift::create([
+            'name' => 'PHPUnit 11 Shift',
+            'sku' => 'PU11',
+            'type' => 'PHP',
+            'slug' => 'upgrade-phpunit-11-pr',
+            'published_at' => '2024-02-04',
+        ]);
+        $shift->commits()->createMany([
+            ['message' => 'Bump PHPUnit dependencies'],
+            ['message' => 'Declare data providers as `static`'],
+            ['message' => 'Adopt PHP attributes in test classes'],
+            ['message' => 'Add return types to test methods'],
+            ['message' => 'Define test classes as `final`'],
+        ]);
+
+        $shift = Shift::create([
+            'name' => 'PHPUnit 12 Shift',
+            'sku' => 'PU12',
+            'type' => 'PHP',
+            'slug' => 'upgrade-phpunit-12-pr',
+            'published_at' => '2025-02-06',
+        ]);
+        $shift->commits()->createMany([
+            ['message' => 'Bump PHPUnit dependencies'],
             ['message' => 'Declare data providers as `static`'],
             ['message' => 'Adopt PHP attributes in test classes'],
             ['message' => 'Add return types to test methods'],
