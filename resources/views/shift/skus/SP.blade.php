@@ -1,7 +1,7 @@
 @extends('layouts.pr')
 
 @section('description')
-<p>This pull request includes updates for the recent minor version release of Laravel as well as bumps your package dependencies. You may review the full list of changes in the <a href="https://github.com/laravel/framework/releases/tag/v12.30.0" class="text-blue-500">Laravel Release Notes</a>, or highlighted changes and tips in the weekly <a href="https://shiftybits.news" class="text-blue-500">Shifty Bits newsletter</a>.</p>
+<p>This pull request includes updates for the recent minor version release of Laravel, as well as bumps your package dependencies. You may review the full list of changes in the <a href="https://github.com/laravel/framework/releases/tag/v12.30.0" class="text-blue-500">Laravel Release Notes</a>, or highlighted changes and tips in the weekly <a href="https://shiftybits.news" class="text-blue-500">Shifty Bits newsletter</a>.</p>
 
 <p><strong>Before merging</strong>, you need to:</p>
 
