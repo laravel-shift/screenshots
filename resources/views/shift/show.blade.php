@@ -23,7 +23,7 @@ $source = Arr::random(['main', 'master', 'develop', 'dev']);
                 merged {{ $shift->commits->count() }} commits into
                 <span class="font-mono p-1 rounded-md bg-github-branch-bg text-github-branch-fg text-xs">{{ $source }}</span>
                 from
-                <span class="font-mono p-1 rounded-md bg-github-branch-bg text-github-branch-fg text-xs">shift-{{ $number }}</span>
+                <span class="font-mono p-1 rounded-md bg-github-branch-bg text-github-branch-fg text-xs">{{ $shift->sku === 'SP' ? 'shift-ci-v' . Str::between($shift->name, ' ', ' ') : 'shift-' . $number }}</span>
                 <svg aria-hidden="true" height="16" viewBox="0 0 16 16" version="1.1" width="16" data-view-component="true" class="inline-block fill-current">
                     <path fill-rule="evenodd" d="M0 6.75C0 5.784.784 5 1.75 5h1.5a.75.75 0 010 1.5h-1.5a.25.25 0 00-.25.25v7.5c0 .138.112.25.25.25h7.5a.25.25 0 00.25-.25v-1.5a.75.75 0 011.5 0v1.5A1.75 1.75 0 019.25 16h-7.5A1.75 1.75 0 010 14.25v-7.5z"></path><path fill-rule="evenodd" d="M5 1.75C5 .784 5.784 0 6.75 0h7.5C15.216 0 16 .784 16 1.75v7.5A1.75 1.75 0 0114.25 11h-7.5A1.75 1.75 0 015 9.25v-7.5zm1.75-.25a.25.25 0 00-.25.25v7.5c0 .138.112.25.25.25h7.5a.25.25 0 00.25-.25v-7.5a.25.25 0 00-.25-.25h-7.5z"></path>
                 </svg>
@@ -37,7 +37,7 @@ $source = Arr::random(['main', 'master', 'develop', 'dev']);
                         <path fill-rule="evenodd" d="M1.5 2.75a.25.25 0 01.25-.25h8.5a.25.25 0 01.25.25v5.5a.25.25 0 01-.25.25h-3.5a.75.75 0 00-.53.22L3.5 11.44V9.25a.75.75 0 00-.75-.75h-1a.25.25 0 01-.25-.25v-5.5zM1.75 1A1.75 1.75 0 000 2.75v5.5C0 9.216.784 10 1.75 10H2v1.543a1.457 1.457 0 002.487 1.03L7.061 10h3.189A1.75 1.75 0 0012 8.25v-5.5A1.75 1.75 0 0010.25 1h-8.5zM14.5 4.75a.25.25 0 00-.25-.25h-.5a.75.75 0 110-1.5h.5c.966 0 1.75.784 1.75 1.75v5.5A1.75 1.75 0 0114.25 12H14v1.543a1.457 1.457 0 01-2.487 1.03L9.22 12.28a.75.75 0 111.06-1.06l2.22 2.22v-2.19a.75.75 0 01.75-.75h1a.25.25 0 00.25-.25v-5.5z"></path>
                     </svg>
                     <span>Conversation</span>
-                    <span class="px-2 py-1 bg-gray-100 rounded-full text-sm">{{ Arr::random([6, 7, 8, 9, 10, 11]) }}</span>
+                    <span class="px-2 py-1 bg-gray-100 rounded-full text-sm">{{ $shift->sku === 'SP' ? 2 : Arr::random([6, 7, 8, 9, 10, 11]) }}</span>
                 </a>
 
                 <a href="?view=commits" class="-m-px px-4 py-2 space-x-1 {{ $view === 'commits' ? 'bg-white border-t border-x border-gray-300 rounded-t-md text-gray-900' : 'text-gray-600' }}">
