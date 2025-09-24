@@ -21,6 +21,10 @@ function commit_sha(): string
 
 function files_changed($shift): int
 {
+    if ($shift->sku === 'SP') {
+        return 2;
+    }
+
     if ($shift->isTailwind()) {
         return Arr::random([23, 39, 42, 56, 63]);
     }
