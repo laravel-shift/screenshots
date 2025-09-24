@@ -298,6 +298,20 @@ class ShiftsSeeder extends Seeder
             ['message' => 'Bump Composer dependencies'],
         ]);
 
+        $shift = Shift::create([
+            'name' => 'Laravel 12.31.0 Shift',
+            'sku' => 'SP',
+            'type' => 'Laravel',
+            'slug' => 'weekly-laravel-upgrade-pr',
+            'published_at' => '2025-09-23',
+        ]);
+        $shift->commits()->createMany([
+            ['message' => 'Bump Laravel version constraint'],
+            ['message' => 'Bump core Laravel dependencies'],
+            ['message' => 'Bump community package dependencies'],
+            ['message' => 'composer update'],
+        ]);
+
         // additional Shifts
         $shift = Shift::create([
             'name' => 'Upgrade Checker',
