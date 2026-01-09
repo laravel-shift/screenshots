@@ -1,5 +1,6 @@
 <?php
 
+use App\Models\Shift;
 use Illuminate\Support\Arr;
 use Illuminate\Support\Str;
 
@@ -40,7 +41,7 @@ function files_changed($shift): int
     return Arr::random([63, 76, 82, 91, 103, 111, 123, 142, 256]);
 }
 
-function plus_changes($shift): int
+function plus_changes(Shift $shift): int
 {
     if ($shift->sku === '10') {
         return 1107;
@@ -49,9 +50,9 @@ function plus_changes($shift): int
     return rand(80, 200);
 }
 
-function minus_changes($shift): int
+function minus_changes(Shift $shift): int
 {
-    if ($shift->sku === 'LF') {
+    if ($shift->sku === 'FL') {
         return 0;
     }
 

@@ -3,11 +3,7 @@ This project recreates the GitHub Pull Request screens to allow automating the p
 
 ## System Requirements
 
-In addition to the standard Laravel requirements, this project has the following system requirements:
-
-* The PHP GD extension
-* Optipng
-* Pngquant 2
+In addition to the standard Laravel requirements, this project uses the ImageMagick extension.
 
 See [spatie/image-optimizer](https://github.com/spatie/image-optimizer#optimization-tools) for installation instructions on various operating systems.
 
