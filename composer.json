@@ -9,10 +9,10 @@
     "license": "MIT",
     "require": {
         "php": "^8.2",
-        "ext-gd": "*",
+        "ext-imagick": "*",
         "laravel/framework": "^11.42",
         "laravel/tinker": "^2.9",
-        "spatie/browsershot": "^5.0",
+        "spatie/browsershot": "^5.2",
         "spatie/image": "^3.8"
     },
     "require-dev": {

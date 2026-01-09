@@ -314,6 +314,20 @@ class ShiftsSeeder extends Seeder
 
         // additional Shifts
         $shift = Shift::create([
+            'name' => '"Fast Laravel" Configuration',
+            'sku' => 'FL',
+            'type' => 'Laravel',
+            'slug' => 'fast-laravel-cache-configuration-pr',
+            'published_at' => today(),
+        ]);
+        $shift->commits()->createMany([
+            ['message' => 'Custom `cache-control` middleware'],
+            ['message' => 'Register `static` middleware group'],
+            ['message' => 'Install `nexxai/laravel-cfcache`'],
+            ['message' => 'Shift cleanup'],
+        ]);
+
+        $shift = Shift::create([
             'name' => 'Laravel Linter',
             'sku' => 'LL',
             'type' => 'Laravel',

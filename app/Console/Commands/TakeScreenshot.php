@@ -19,7 +19,7 @@ class TakeScreenshot extends Command
             : [Shift::where('sku', $this->argument('shift'))->firstOrFail()];
 
         foreach ($shifts as $shift) {
-            $filename = $shift->slug.'.png';
+            $filename = $shift->slug.'.webp';
             $this->line('Generating: '.$filename);
 
             $html = view('shift.show', ['shift' => $shift])->render();

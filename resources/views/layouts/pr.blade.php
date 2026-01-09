@@ -92,8 +92,13 @@
                 </svg>
             </div>
             <div class="mt-3 text-gray-600 text-xs font-semibold">
-                <img class="w-5 h-5 rounded-full mr-1 inline-block" src="https://avatars.githubusercontent.com/u/4977161?s=40&amp;v=4">
-                jessarcher
+                @if($shift->sku === 'FL')
+                    <img class="w-5 h-5 rounded-full mr-1 inline-block" src="https://avatars.githubusercontent.com/u/4316564?s=40&amp;v=4">
+                    nexxai
+                @else
+                    <img class="w-5 h-5 rounded-full mr-1 inline-block" src="https://avatars.githubusercontent.com/u/4977161?s=40&amp;v=4">
+                    jessarcher
+                @endif
             </div>
         </div>
         <div class="py-4">
