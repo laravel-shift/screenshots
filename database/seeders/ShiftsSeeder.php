@@ -314,7 +314,7 @@ class ShiftsSeeder extends Seeder
 
         // additional Shifts
         $shift = Shift::create([
-            'name' => 'Fast Laravel Configuration',
+            'name' => '"Fast Laravel" Configuration',
             'sku' => 'FL',
             'type' => 'Laravel',
             'slug' => 'fast-laravel-cache-configuration-pr',
