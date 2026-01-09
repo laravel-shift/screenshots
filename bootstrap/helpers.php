@@ -51,6 +51,10 @@ function plus_changes($shift): int
 
 function minus_changes($shift): int
 {
+    if ($shift->sku === 'LF') {
+        return 0;
+    }
+
     if ($shift->sku === '10') {
         return 1403;
     }
