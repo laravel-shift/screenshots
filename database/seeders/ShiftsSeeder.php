@@ -314,20 +314,6 @@ class ShiftsSeeder extends Seeder
 
         // additional Shifts
         $shift = Shift::create([
-            'name' => 'Upgrade Checker',
-            'sku' => 'UC',
-            'type' => 'Laravel',
-            'slug' => 'laravel-upgrade-checker-pr',
-            'published_at' => today(),
-        ]);
-        $shift->commits()->createMany([
-            ['message' => 'Apply code style'],
-            ['message' => 'Adopt short array syntax', 'info' => true],
-            ['message' => 'Shift bindings', 'info' => true],
-            ['message' => 'Convert to new helper methods', 'info' => true],
-        ]);
-
-        $shift = Shift::create([
             'name' => 'Laravel Linter',
             'sku' => 'LL',
             'type' => 'Laravel',
@@ -400,20 +386,6 @@ class ShiftsSeeder extends Seeder
         $shift->commits()->createMany([
             ['message' => 'Shift bindings', 'info' => true],
             ['message' => 'Namespace models under App\Models'],
-        ]);
-
-        $shift = Shift::create([
-            'name' => 'BrowserKit Tests Converter',
-            'sku' => 'T54',
-            'type' => 'Laravel',
-            'slug' => 'upgrade-laravel-http-tests-pr',
-            'published_at' => today(),
-        ]);
-        $shift->commits()->createMany([
-            ['message' => 'Shift bindings', 'info' => true],
-            ['message' => 'Shift core files'],
-            ['message' => 'Shift tests'],
-            ['message' => 'Bump Laravel dependencies'],
         ]);
 
         $shift = Shift::create([
@@ -495,22 +467,6 @@ class ShiftsSeeder extends Seeder
             ['message' => 'Adopt short array syntax', 'info' => true],
             ['message' => 'Convert string references to `::class`', 'info' => true],
             ['message' => 'Apply code style', 'info' => true],
-        ]);
-
-        $shift = Shift::create([
-            'name' => 'Dusk Converter',
-            'sku' => 'DC',
-            'type' => 'Laravel',
-            'slug' => 'convert-laravel-dusk-to-pest-browser-tests',
-            'published_at' => '2025-08-21',
-        ]);
-        $shift->commits()->createMany([
-            ['message' => 'Add dependencies'],
-            ['message' => 'Convert Dusk test classes to Pest'],
-            ['message' => 'Convert to Pest Browser Testing API'],
-            ['message' => 'Rename `dusk` HTML attribute'],
-            ['message' => 'Remove core Dusk classes'],
-            ['message' => 'Swap test runner'],
         ]);
 
         // Lumen
@@ -602,36 +558,6 @@ class ShiftsSeeder extends Seeder
             ['message' => 'Configure fractional padding values'],
             ['message' => 'Configure Tailwind UI variants'],
             ['message' => 'Remove transitions'],
-        ]);
-
-        $shift = Shift::create([
-            'name' => 'Tailwind Converter',
-            'sku' => 'TC',
-            'type' => 'Tailwind',
-            'slug' => 'convert-bootstrap-css-tailwind-pr',
-            'published_at' => today(),
-        ]);
-        $shift->commits()->createMany([
-            ['message' => 'Add Tailwind dependencies'],
-            ['message' => 'Convert custom CSS to Tailwind utility classes'],
-            ['message' => 'Rename conflicting classes'],
-            ['message' => 'Add custom Tailwind config'],
-            ['message' => 'Configure build for Tailwind assets'],
-            ['message' => 'Remove CSS build assets'],
-            ['message' => 'Streamline Tailwind config file'],
-        ]);
-
-        $shift = Shift::create([
-            'name' => 'Tailwind Linter',
-            'sku' => 'TL',
-            'type' => 'Tailwind',
-            'slug' => 'tailwind-linter-pr',
-            'published_at' => today(),
-        ]);
-        $shift->commits()->createMany([
-            ['message' => 'Bump Tailwind dependencies'],
-            ['message' => 'Streamline Tailwind config file'],
-            ['message' => 'Order utility classes'],
         ]);
 
         // PHP
@@ -760,24 +686,6 @@ class ShiftsSeeder extends Seeder
             ['message' => 'Configure job for code analysis'],
             ['message' => 'Configure job for tests'],
             ['message' => 'Configure job for Dusk'],
-        ]);
-
-        // Django
-        $shift = Shift::create([
-            'name' => 'Django 4.1 Shift',
-            'sku' => 'D41',
-            'type' => 'Django',
-            'slug' => 'upgrade-django-41-pr',
-            'published_at' => today(),
-        ]);
-        $shift->commits()->createMany([
-            ['message' => 'Bump dependencies'],
-            ['message' => 'Use `non_form_errors` property'],
-            ['message' => 'Remove `default_app_config` variable'],
-            ['message' => 'Rename `whitelist` references within `EmailValidator`'],
-            ['message' => 'Update deprecated `nulls_first` and `nulls_last` values'],
-            ['message' => 'Replace `get_key_columns` call with `get_relations`'],
-            ['message' => 'Replace undocumented `SuccessURLAllowedHostsMixin`'],
         ]);
     }
 }
