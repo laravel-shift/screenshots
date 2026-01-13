@@ -502,6 +502,26 @@ class ShiftsSeeder extends Seeder
             ['message' => 'Bump Laravel dependencies'],
         ]);
 
+        // Livewire
+        $shift = Shift::create([
+            'name' => 'Livewire 4.x Shift',
+            'sku' => 'L4',
+            'type' => 'Laravel',
+            'slug' => 'upgrade-livewire-4-pr',
+            'published_at' => '2026-01-14',
+        ]);
+        $shift->commits()->createMany([
+            ['message' => 'Preserve `wire:model` "bubbling"'],
+            ['message' => 'Adopt `Route::livewire`'],
+            ['message' => 'Use native browser View Transition API'],
+            ['message' => 'Migrate Volt to single-file components'],
+            ['message' => 'Close `<livewire>` tags'],
+            ['message' => 'Modernize JavaScript API'],
+            ['message' => 'Adopt `wire:navigate:scroll`'],
+            ['message' => 'Shift config file'],
+            ['message' => 'Bump dependencies'],
+        ]);
+
         // Tailwind
         $shift = Shift::create([
             'name' => 'Tailwind 1.x Shift',
