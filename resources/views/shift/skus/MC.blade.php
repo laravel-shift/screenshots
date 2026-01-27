@@ -1,3 +1,7 @@
+@extends('layouts.pr')
+
+@section('description')
+
 <p>This pull request includes the changes for converting class-based Livewire components to the new multi-file components in Livewire 4. Feel free to commit any additional changes to the <code>shift-{{ $number }}</code> branch.</p>
 
 <p><strong>Before merging</strong>, you need to:</p>
@@ -10,4 +14,6 @@
 </ul>
 
 <p>If you get stuck, never hesitate to <a class="text-blue-500" href="mailto:support@laravelshift.com">email support</a>. If you need more help with your upgrade, check out the <a class="text-blue-500" href="https://laravelshift.com/human-shifts">Human Shifts</a>.</p>
+
+@endsection
 
