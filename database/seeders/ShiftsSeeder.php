@@ -506,7 +506,7 @@ class ShiftsSeeder extends Seeder
         $shift = Shift::create([
             'name' => 'Livewire 4.x Shift',
             'sku' => 'L4',
-            'type' => 'Laravel',
+            'type' => 'Livewire',
             'slug' => 'upgrade-livewire-4-pr',
             'published_at' => '2026-01-14',
         ]);
@@ -520,6 +520,18 @@ class ShiftsSeeder extends Seeder
             ['message' => 'Adopt `wire:navigate:scroll`'],
             ['message' => 'Shift config file'],
             ['message' => 'Bump dependencies'],
+        ]);
+
+        $shift = Shift::create([
+            'name' => 'MFC Converter',
+            'sku' => 'MC',
+            'type' => 'Livewire',
+            'slug' => 'convert-livewire-components-multi-file-components-pr',
+            'published_at' => today(),
+        ]);
+        $shift->commits()->createMany([
+            ['message' => 'Convert to multi-file components'],
+            ['message' => 'Shift cleanup'],
         ]);
 
         // Tailwind
