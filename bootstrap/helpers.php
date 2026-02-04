@@ -43,6 +43,10 @@ function files_changed($shift): int
 
 function plus_changes(Shift $shift): int
 {
+    if ($shift->sku === 'CR') {
+        return 3;
+    }
+
     if ($shift->sku === '10') {
         return 1107;
     }
@@ -52,7 +56,7 @@ function plus_changes(Shift $shift): int
 
 function minus_changes(Shift $shift): int
 {
-    if ($shift->sku === 'FL') {
+    if (in_array($shift->sku, ['CR', 'FL'])) {
         return 0;
     }
 
