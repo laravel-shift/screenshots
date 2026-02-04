@@ -317,7 +317,7 @@ class ShiftsSeeder extends Seeder
             'name' => 'Laravel Cloud Readiness',
             'sku' => 'CR',
             'type' => 'Laravel',
-            'slug' => 'laravel-cloud-migration-checker-pr',
+            'slug' => 'laravel-cloud-migration-check-pr',
             'published_at' => today(),
         ]);
         $shift->commits()->createMany([
