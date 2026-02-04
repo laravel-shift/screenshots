@@ -314,6 +314,17 @@ class ShiftsSeeder extends Seeder
 
         // additional Shifts
         $shift = Shift::create([
+            'name' => 'Laravel Cloud Readiness',
+            'sku' => 'CR',
+            'type' => 'Laravel',
+            'slug' => 'laravel-cloud-migration-check-pr',
+            'published_at' => today(),
+        ]);
+        $shift->commits()->createMany([
+            ['message' => 'Bump minimum constraints'],
+        ]);
+
+        $shift = Shift::create([
             'name' => '"Fast Laravel" Configuration',
             'sku' => 'FL',
             'type' => 'Laravel',
