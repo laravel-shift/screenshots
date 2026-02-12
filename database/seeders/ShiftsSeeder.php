@@ -522,7 +522,7 @@ class ShiftsSeeder extends Seeder
             'published_at' => '2023-07-20',
         ]);
         $shift->commits()->createMany([
-            ['message' => 'Renamespace Livewire components'],
+            ['message' => 'Re-namespace Livewire components'],
             ['message' => 'Preserve `wire:model` behavior'],
             ['message' => 'Upgrade event dispatching'],
             ['message' => 'Remove default modifiers'],
