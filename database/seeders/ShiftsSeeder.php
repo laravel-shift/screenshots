@@ -515,6 +515,24 @@ class ShiftsSeeder extends Seeder
 
         // Livewire
         $shift = Shift::create([
+            'name' => 'Livewire 3.x Shift',
+            'sku' => 'L3',
+            'type' => 'Livewire',
+            'slug' => 'upgrade-livewire-3-pr',
+            'published_at' => '2023-07-20',
+        ]);
+        $shift->commits()->createMany([
+            ['message' => 'Renamespace Livewire components'],
+            ['message' => 'Preserve `wire:model` behavior'],
+            ['message' => 'Upgrade event dispatching'],
+            ['message' => 'Remove default modifiers'],
+            ['message' => 'Rename test assertions'],
+            ['message' => 'Refactor removed `forgetComputed` method'],
+            ['message' => 'Shift config file'],
+            ['message' => 'Bump dependencies'],
+        ]);
+
+        $shift = Shift::create([
             'name' => 'Livewire 4.x Shift',
             'sku' => 'L4',
             'type' => 'Livewire',
