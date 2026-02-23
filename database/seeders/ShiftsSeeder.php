@@ -294,8 +294,25 @@ class ShiftsSeeder extends Seeder
             ['message' => 'Remove unused `ValidatesRequests` trait'],
             ['message' => 'Modernize controller middleware'],
             ['message' => 'Remove base controller inheritance'],
-            ['message' => 'Add new Laravel `composer run dev` script'],
+            ['message' => 'Add Laravel `composer run` scripts'],
             ['message' => 'Bump Composer dependencies'],
+        ]);
+
+        $shift = Shift::create([
+            'name' => 'Laravel 13.x Shift',
+            'sku' => '13',
+            'type' => 'Laravel',
+            'slug' => 'upgrade-laravel-pre-13-pr',
+            'published_at' => '2026-02-23',
+        ]);
+        $shift->commits()->createMany([
+            ['message' => 'Shift core files'],
+            ['message' => 'Adopt new PHP attributes for simple properties'],
+            ['message' => 'Refactor deprecated request access'],
+            ['message' => 'Shift `ENV` variables'],
+            ['message' => 'Add Laravel `composer run` scripts'],
+            ['message' => 'Bump Composer dependencies'],
+            ['message' => 'Bump NPM dependencies'],
         ]);
 
         $shift = Shift::create([
