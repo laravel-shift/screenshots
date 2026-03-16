@@ -302,8 +302,8 @@ class ShiftsSeeder extends Seeder
             'name' => 'Laravel 13.x Shift',
             'sku' => '13',
             'type' => 'Laravel',
-            'slug' => 'upgrade-laravel-pre-13-pr',
-            'published_at' => '2026-02-23',
+            'slug' => 'upgrade-laravel-13-pr',
+            'published_at' => '2026-03-17',
         ]);
         $shift->commits()->createMany([
             ['message' => 'Shift core files'],
