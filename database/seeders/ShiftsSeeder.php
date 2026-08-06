@@ -812,6 +812,22 @@ class ShiftsSeeder extends Seeder
         ]);
 
         $shift = Shift::create([
+            'name' => 'Mockery to Double Converter',
+            'sku' => 'TD',
+            'type' => 'PHP',
+            'slug' => 'mockery-test-double-converter',
+            'published_at' => today()->addDay(),
+        ]);
+        $shift->commits()->createMany([
+            ['message' => 'Add `jasonmccreary/double` dependency', 'info' => true],
+            ['message' => 'Convert double creation'],
+            ['message' => 'Convert expectations'],
+            ['message' => 'Convert argument matchers'],
+            ['message' => 'Convert verifications'],
+            ['message' => 'Convert invoke assertions'],
+        ]);
+
+        $shift = Shift::create([
             'name' => 'CI Generator',
             'sku' => 'CI',
             'type' => 'PHP',
